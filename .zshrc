@@ -76,7 +76,7 @@ ZSH_THEME="aussiegeek"
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 #plugins=(git zsh-autosuggestions)
 #plugins=(git zsh-autosuggestions zsh-autocomplete)
-plugins=(git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete)
+plugins=(git zsh-autosuggestions fast-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 

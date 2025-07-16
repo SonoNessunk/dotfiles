@@ -5,8 +5,8 @@ live_config_reload = true
 #decorations = "None"
 dimensions = { columns = 120, lines = 35 }
 padding = {x = 10, y = 10}
-#opacity = 0.98
-title = "Terminal  |  Alacritty"
+opacity = 0.8
+title = "Terminal | Alacritty"
 dynamic_title = false
 startup_mode = "Maximized"
 
