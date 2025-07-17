@@ -1,3 +1,6 @@
+[env]
+TERM = "screen-256color"
+
 [general]
 live_config_reload = true
 
@@ -5,7 +8,7 @@ live_config_reload = true
 #decorations = "None"
 dimensions = { columns = 120, lines = 35 }
 padding = {x = 10, y = 10}
-opacity = 0.9
+opacity = 1.9
 title = "Terminal | Alacritty"
 dynamic_title = false
 startup_mode = "Maximized"
@@ -43,7 +46,7 @@ thickness = 0.20
 hide_when_typing = false
 
 [font]
-normal = { family = "Cascadia Mono"}
-bold = { family = "Cascadia Mono"}
-italic = { family = "Cascadia Mono"}
-bold_italic = { family = "Cascadia Mono"}
+normal = { family = "CaskaydiaMono Nerd Font"}
+bold = { family = "CaskaydiaMono Nerd Font"}
+italic = { family = "CaskaydiaMono Nerd Font"}
+bold_italic = { family = "CaskaydiaMono Nerd Font"}
