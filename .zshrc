@@ -76,7 +76,10 @@ ZSH_THEME="nessk_theme"
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 #plugins=(git zsh-autosuggestions)
 #plugins=(git zsh-autosuggestions zsh-autocomplete)
-plugins=(git zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete)
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
