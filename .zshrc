@@ -79,7 +79,7 @@ ZSH_THEME="nessk_theme"
 DISABLE_MAGIC_FUNCTIONS="true"
 DISABLE_COMPFIX="true"
 
-plugins=(git zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
