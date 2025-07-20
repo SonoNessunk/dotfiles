@@ -76,12 +76,15 @@ ZSH_THEME="nessk_theme"
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 #plugins=(git zsh-autosuggestions)
 #plugins=(git zsh-autosuggestions zsh-autocomplete)
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_COMPFIX="true"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete)
+plugins=(git zsh-autosuggestions zsh-autocomplete zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="50"
 
 # User configuration
 
@@ -123,6 +126,6 @@ setopt EXTENDED_HISTORY
 
 bindkey -r '^S'
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t main || tmux new-session -s main
-fi
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#  tmux attach-session -t main || tmux new-session -s main
+#fi
