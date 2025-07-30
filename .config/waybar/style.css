@@ -1,121 +1,106 @@
-/* 全局设置 */
 * {
-  font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
-  font-weight: bold;
-  font-size: 16px;
-  color: #dcdfe1;
+/* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+font-size: 15px;
+transition: background-color .2s ease-out;
 }
 
-/* 透明 Waybar 背景 */
-#waybar {
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  box-shadow: none;
+window#waybar {
+  background: rgba(31, 31, 31, 0.75);
+  color: #e4e4e4;
+  font-family:
+  SpaceMono Nerd Font,
+  feather;
+  transition: background-color .5s;
 }
 
-/* 所有模块统一风格 */
-#workspaces,
-#window,
-#tray{
-  /*background-color: rgba(29,31,46, 0.95);*/
-  background-color: rgba(15,27,53,0.9);
-  padding: 4px 6px; /* 保持内部间距 */
-  margin-top: 6px; /* 外部间距增加 */
-  margin-left: 6px; /* 外部间距增加 */
-  margin-right: 6px; /* 外部间距增加 */
-  border-radius: 10px;
-  border-width: 0px;
+.modules-left,
+.modules-center,
+.modules-right
+{
+  background: rgba(14, 14, 14, 0.74);
+  margin: 5px 10px;
+  border-radius: 15px;
+}
+.modules-left {
+  padding: 0;
+}
+.modules-center {
+  padding: 0 10px;
 }
 
 #clock,
-#custom-power{
-  background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* 与屏幕顶部留出距离 */
-  margin-right: 6px;
-  /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
-  border-radius: 0 10px 10px 0;
-  border-width: 0px;
-}
-
-#network,
-#custom-lock{
-  background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* 与屏幕顶部留出距离 */
-  margin-left: 6px;
-  /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
-  border-radius: 10px 0 0 10px;
-  border-width: 0px;
-}
-
-#custom-reboot,
-#bluetooth,
 #battery,
-#pulseaudio,
-#backlight,
-#custom-temperature,
+#cpu,
 #memory,
-#cpu{
-  background-color: rgba(15,27,53,0.9);
-  margin-top: 6px; /* 与屏幕顶部留出距离 */
-  /*margin-bottom: 4px;*/
-  padding: 4px 2px; /* 保持内部间距 */
-  border-width: 0px;
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd {
+padding: 0 10px;
+border-radius: 15px;
 }
 
-#custpm-temperature.critical,
-#pulseaudio.muted {
-  color: #FF0000;
-  padding-top: 0;
-}
-
-/* 鼠标悬停变亮一点 */
-#bluetooth:hover,
-#network:hover,
-/*#tray:hover,*/
-#backlight:hover,
-#battery:hover,
-#pulseaudio:hover,
-#custom-temperature:hover,
-#memory:hover,
-#cpu:hover,
 #clock:hover,
-#custom-lock:hover,
-#custom-reboot:hover,
-#custom-power:hover,
-/*#workspaces:hover,*/
-#window:hover {
-  background-color: rgba(70, 75, 90, 0.9);
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover {
+background: rgba(43, 43, 43, 0.902);
 }
 
-/* 工作区激活状态高亮 */
-#workspaces button:hover{
-  background-color: rgba(97, 175, 239, 0.2);
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 10px;
+
+#workspaces button {
+background: transparent;
+font-family:
+SpaceMono Nerd Font,
+feather;
+font-weight: 900;
+font-size: 13pt;
+color: #e4e4e4;
+border:none;
+border-radius: 15px;
 }
 
 #workspaces button.active {
-  background-color: #61afef; /* 蓝色高亮 */
-  color: #ffffff;
-  padding: 2px 8px;
-  margin: 0 2px;
-  border-radius: 10px;
+background: rgba(43, 43, 43, 0.902);
 }
 
-/* 未激活工作区按钮 */
-#workspaces button {
-  background: transparent;
-  border: none;
-  color: #888888;
-  padding: 2px 8px;
-  margin: 0 2px;
-  font-weight: bold;
+#workspaces button:hover {
+background: rgba(43, 43, 43, 0.902);
+color: #e4e4e4;
+box-shadow: none;
 }
 
-#window {
-  font-weight: 500;
-  font-style: italic;
+#custom-arch {
+margin-left: 5px;
+padding: 0 10px;
+font-size: 25px;
+transition: color .5s;
+}
+#custom-arch:hover {
+color: #1793d1;
 }
