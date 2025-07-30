@@ -6,7 +6,7 @@ transition: background-color .2s ease-out;
 }
 
 window#waybar {
-  background: rgba(31, 31, 31, 0.75);
+  background: rgba(31, 31, 31, 0);
   color: #e4e4e4;
   font-family:
   SpaceMono Nerd Font,
@@ -18,7 +18,7 @@ window#waybar {
 .modules-center,
 .modules-right
 {
-  background: rgba(14, 14, 14, 0.74);
+  background: rgba(14, 14, 14, 1);
   margin: 5px 10px;
   border-radius: 15px;
 }
