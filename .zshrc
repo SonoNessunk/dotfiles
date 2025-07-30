@@ -76,8 +76,8 @@ ZSH_THEME="nessk_theme"
 #plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 #plugins=(git zsh-autosuggestions)
 #plugins=(git zsh-autosuggestions zsh-autocomplete)
-DISABLE_MAGIC_FUNCTIONS="true"
-DISABLE_COMPFIX="true"
+#DISABLE_MAGIC_FUNCTIONS="true"
+#DISABLE_COMPFIX="true"
 
 plugins=(git zsh-autosuggestions zsh-autocomplete)
 
@@ -126,6 +126,6 @@ setopt EXTENDED_HISTORY
 
 bindkey -r '^S'
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t main || tmux new-session -s main
-fi
+#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#  tmux attach-session -t main || tmux new-session -s main
+#fi
