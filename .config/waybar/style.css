@@ -1,30 +1,31 @@
 * {
-/* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
-font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-font-size: 15px;
-transition: background-color .2s ease-out;
+  /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  transition: background-color .2s ease-out;
 }
 
 window#waybar {
   background: rgba(31, 31, 31, 0);
   color: #e4e4e4;
   font-family:
-  SpaceMono Nerd Font,
-  feather;
+    SpaceMono Nerd Font,
+    feather;
   transition: background-color .5s;
 }
 
 .modules-left,
 .modules-center,
-.modules-right
-{
+.modules-right {
   background: rgba(14, 14, 14, 1);
-  margin: 5px 10px;
+  margin: 5px;
   border-radius: 15px;
 }
+
 .modules-left {
   padding: 0;
 }
+
 .modules-center {
   padding: 0 10px;
 }
@@ -47,8 +48,8 @@ window#waybar {
 #power-profiles-daemon,
 #language,
 #mpd {
-padding: 0 10px;
-border-radius: 15px;
+  padding: 0 10px;
+  border-radius: 15px;
 }
 
 #clock:hover,
@@ -69,38 +70,39 @@ border-radius: 15px;
 #power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
-background: rgba(43, 43, 43, 0.902);
+  background: rgba(43, 43, 43, 0.902);
 }
 
 
 #workspaces button {
-background: transparent;
-font-family:
-SpaceMono Nerd Font,
-feather;
-font-weight: 900;
-font-size: 13pt;
-color: #e4e4e4;
-border:none;
-border-radius: 15px;
+  background: transparent;
+  font-family:
+    SpaceMono Nerd Font,
+    feather;
+  font-weight: 900;
+  font-size: 13pt;
+  color: #e4e4e4;
+  border: none;
+  border-radius: 15px;
 }
 
 #workspaces button.active {
-background: rgba(43, 43, 43, 0.902);
+  background: rgba(43, 43, 43, 0.902);
 }
 
 #workspaces button:hover {
-background: rgba(43, 43, 43, 0.902);
-color: #e4e4e4;
-box-shadow: none;
+  background: rgba(43, 43, 43, 0.902);
+  color: #e4e4e4;
+  box-shadow: none;
 }
 
 #custom-arch {
-margin-left: 5px;
-padding: 0 10px;
-font-size: 25px;
-transition: color .5s;
+  margin-left: 5px;
+  padding: 0 10px;
+  font-size: 25px;
+  transition: color .5s;
 }
+
 #custom-arch:hover {
-color: #1793d1;
+  color: #1793d1;
 }
