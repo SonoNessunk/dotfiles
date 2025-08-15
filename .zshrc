@@ -79,7 +79,7 @@ ZSH_THEME="nessk_theme"
 #DISABLE_MAGIC_FUNCTIONS="true"
 #DISABLE_COMPFIX="true"
 
-plugins=(git zsh-autosuggestions zsh-autocomplete)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,10 +122,12 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt EXTENDED_HISTORY
 
-#fastfetch
-
 bindkey -r '^S'
 
-#if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#  tmux attach-session -t main || tmux new-session -s main
-#fi
+if [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  tmux attach-session -t main || tmux new-session -s main
+fi
+
+if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+    fastfetch
+fi
