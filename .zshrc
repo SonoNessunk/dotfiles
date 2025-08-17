@@ -124,10 +124,11 @@ setopt EXTENDED_HISTORY
 
 bindkey -r '^S'
 
-if [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t main || tmux new-session -s main
-fi
+#if [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#  tmux attach-session -t main || tmux new-session -s main
+#fi
 
 if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
     fastfetch
 fi
+
