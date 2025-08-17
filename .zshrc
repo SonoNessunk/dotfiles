@@ -132,3 +132,11 @@ if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
     fastfetch
 fi
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+  echo -ne "\e[5 q"
+}
