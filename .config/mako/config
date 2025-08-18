@@ -20,11 +20,10 @@ progress-color=over #2979ffff
 icons=1
 icon-border-radius=5
 
-
 markup=1
 actions=1
 default-timeout=10000
 format=<b>%s</b>\n%b (%g notifiche)
 
 ignore-timeout=0
-group-by=app-name
+#group-by=app-name
