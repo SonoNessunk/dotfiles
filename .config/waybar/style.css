@@ -1,5 +1,5 @@
 * {
-  font-family: "Fira Sans Semibold", Symbols Nerd Font, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans Semibold", "CaskaydiaMono Nerd Font";
   font-size: 15px;
   transition: background-color .2s ease-out;
 }
@@ -7,9 +7,6 @@
 window#waybar {
   background: rgba(31, 31, 31, 0);
   color: #e4e4e4;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
   transition: background-color .5s;
 }
 
@@ -75,9 +72,6 @@ window#waybar {
 
 #workspaces button {
   background: transparent;
-  font-family:
-    SpaceMono Nerd Font,
-    feather;
   font-weight: 900;
   font-size: 15px;
   color: #e4e4e4;
