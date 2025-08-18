@@ -1,8 +1,8 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
+    "layer": "bottom", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 42, // Waybar height (to be removed for auto height)
+    "height": 46, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
     "reload_style_on_change": true,
     // Choose the order of the modules
@@ -14,6 +14,7 @@
         "hyprland/window"
     ],
     "modules-right": [
+        "tray",
         "pulseaudio",
         "network",
         "hyprland/language",
