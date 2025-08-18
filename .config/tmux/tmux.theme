@@ -1,5 +1,4 @@
 # default statusbar colors
-#set-option -g status-style bg=#272930,fg=colour9
 set-option -g status-style bg=default,fg=colour9
 
 # default window title colors
