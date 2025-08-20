@@ -159,7 +159,8 @@ git config --global core.editor "nano"
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 xdg-user-dirs-update
 
-systemctl --user enable --now hyprpaper.service
+systemctl --user enable --now waybar.service
+systemctl --user enable --now hyprpolkitagent.service
 systemctl --user enable --now hyprpaper.service
 ```
 
