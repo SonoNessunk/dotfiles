@@ -37,7 +37,7 @@
             "headphone": " ",
             "default": [" ", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pkill pavucontrol || pavucontrol"
     },
 
     "network": {
@@ -46,7 +46,7 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected 󰈂",
-      	"on-click": "nm-connection-editor"
+      	"on-click": "pkill nm-connection-e || nm-connection-editor"
     },
 
     "hyprland/language": {
@@ -57,9 +57,9 @@
     },
 
     "clock": {
+        "timezone": "Europe/Rome",
         "format": "{:%H:%M | %e %B} ",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    }
-
+        "format-alt": "{:%Y-%m-%d}",
+        }
 }

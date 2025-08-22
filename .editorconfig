@@ -33,10 +33,10 @@ dotnet_sort_system_directives_first = false
 file_header_template = unset
 
 # this. and Me. preferences
-dotnet_style_qualification_for_event = false
-dotnet_style_qualification_for_field = false
-dotnet_style_qualification_for_method = false
-dotnet_style_qualification_for_property = false
+dotnet_style_qualification_for_event = true
+dotnet_style_qualification_for_field = true
+dotnet_style_qualification_for_method = true
+dotnet_style_qualification_for_property = true
 
 # Language keywords vs BCL types preferences
 dotnet_style_predefined_type_for_locals_parameters_members = true
@@ -200,7 +200,7 @@ csharp_space_between_parentheses = false
 csharp_space_between_square_brackets = false
 
 # Wrapping preferences
-csharp_preserve_single_line_blocks = false
+csharp_preserve_single_line_blocks = true
 csharp_preserve_single_line_statements = false
 
 #### Naming styles ####

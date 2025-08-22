@@ -26,6 +26,7 @@ window#waybar {
   padding: 0 10px;
 }
 
+#tray,
 #clock,
 #battery,
 #cpu,
@@ -58,7 +59,6 @@ window#waybar {
 #pulseaudio:hover,
 #wireplumber:hover,
 #custom-media:hover,
-#tray:hover,
 #mode:hover,
 #idle_inhibitor:hover,
 #scratchpad:hover,
