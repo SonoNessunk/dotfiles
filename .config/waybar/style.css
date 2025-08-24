@@ -28,20 +28,9 @@ window#waybar {
 
 #tray,
 #clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
 #network,
 #pulseaudio,
 #wireplumber,
-#custom-media,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
 #language,
 #mpd {
   padding: 0 10px;
@@ -49,20 +38,9 @@ window#waybar {
 }
 
 #clock:hover,
-#battery:hover,
-#cpu:hover,
-#memory:hover,
-#disk:hover,
-#temperature:hover,
-#backlight:hover,
 #network:hover,
 #pulseaudio:hover,
 #wireplumber:hover,
-#custom-media:hover,
-#mode:hover,
-#idle_inhibitor:hover,
-#scratchpad:hover,
-#power-profiles-daemon:hover,
 #language:hover,
 #mpd:hover {
   background: rgba(43, 43, 43, 0.902);
