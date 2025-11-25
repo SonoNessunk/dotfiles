@@ -64,3 +64,6 @@ function adbscr() {
   echo "Check Debug Wireless, none of the available ports are ADB"
   return 2
 }
+
+
+eval "$(zoxide init zsh)"
