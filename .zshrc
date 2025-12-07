@@ -17,9 +17,9 @@ setopt EXTENDED_HISTORY
 
 bindkey -r '^S'
 
-if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
-    fastfetch
-fi
+#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+#    fastfetch
+#fi
 
 function tm() {
   if [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
