@@ -1,10 +1,7 @@
 export PATH="$HOME/src/flutter/bin:$PATH"
-
-if command -v uwsm &> /dev/null && uwsm check may-start; then
-	exec uwsm start hyprland.desktop
-fi
-
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/Scripts:$PATH"
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
