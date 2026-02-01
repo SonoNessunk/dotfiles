@@ -1,33 +1,93 @@
-export ZSH="$HOME/.oh-my-zsh"
+############################
+# ///  ZSH CORE SETUP  /// #
+############################
 
-ZSH_THEME="nessk_theme"
+autoload -Uz colors && colors
+autoload -Uz vcs_info
+setopt PROMPT_SUBST
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+##########################################
+# ///  VCS (git prompt replacement)  /// #
+##########################################
 
+zstyle ':vcs_info:git:*' formats '(%b%s)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
+zstyle ':vcs_info:*' enable git
+
+precmd() {
+  vcs_info
+}
+
+git_prompt_info() {
+  if [[ -n "$vcs_info_msg_0_" ]]; then
+    if git diff --quiet 2>/dev/null; then
+      echo "%{${fg_bold[green]}%}${vcs_info_msg_0_}🗸%{$reset_color%}"
+    else
+      echo "%{${fg_bold[green]}%}${vcs_info_msg_0_}✗%{$reset_color%}"
+    fi
+  fi
+}
+
+
+####################
+# ///  PROMPT  /// #
+####################
+
+PROMPT=" %{${fg_bold[blue]}%}[ %{${fg[red]}%}%n@%m:%~\$(git_prompt_info)%{${fg_bold[blue]}%} ]%{$reset_color%}
+ $ "
+
+
+##############################
+# ///  PLUGIN (manuali)  /// #
+##############################
+
+
+# Autosuggestions
 ZSH_AUTOSUGGEST_USE_ASYNC=1
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-alias cleanhistory='history -c && fc -p'
+# Syntax Highliting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+#####################
+# ///  HISTORY  /// #
+#####################
+
+HISTFILE=~/.zsh_history
 
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt EXTENDED_HISTORY
 
+
+######################
+# ///  KEYBINDS  /// #
+######################
+
 bindkey -r '^S'
 
-#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
-#    fastfetch
-#fi
 
-function tm() {
+###################
+# ///  ALIAS  /// #
+###################
+
+alias cleanhistory='history -c && fc -p'
+
+
+#######################
+# ///  FUNCTIONS  /// #
+#######################
+
+tm() {
   if [ "$TERM_PROGRAM" != "vscode" ] && command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach-session -t main || tmux new-session -s main
   fi
 }
 
-function y() {
+y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
@@ -36,7 +96,7 @@ function y() {
   echo -ne "\e[5 q"
 }
 
-function adbscr() {
+adbscr() {
   local host="${1:-${IP:-192.168.1.100}}"
   local port out
 
@@ -66,4 +126,10 @@ function adbscr() {
 }
 
 
-eval "$(zoxide init zsh)"
+#######################
+# ///  AUTOSTART  /// #
+#######################
+
+#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+#    fastfetch
+#fi
