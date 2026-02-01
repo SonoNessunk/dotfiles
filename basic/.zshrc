@@ -59,7 +59,7 @@ function adbscr() {
       echo " - Failed"
       adb disconnect "$host:$port" >/dev/null 2>&1 || true
     fi
-  done < <(nmap "$host" -p30000-60000 --open -Pn -T4 2>/dev/null | awk '/\/tcp/ {print $1}')
+  done < <(nmap "$host" -p- --open -Pn -T4 2>/dev/null | awk '/\/tcp/ {print $1}')
 
   echo "Check Debug Wireless, none of the available ports are ADB"
   return 2
