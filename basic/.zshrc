@@ -7,24 +7,22 @@ autoload -Uz vcs_info
 setopt PROMPT_SUBST
 
 
-##########################################
-# ///  VCS (git prompt replacement)  /// #
-##########################################
+########################
+# ///  GIT PROMPT  /// #
+########################
 
-zstyle ':vcs_info:git:*' formats '(%b%s)'
-zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
-zstyle ':vcs_info:*' enable git
-
-precmd() {
-  vcs_info
-}
+ZSH_THEME_GIT_PROMPT_PREFIX="%{${fg_bold[green]}%}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="🗸"
+ZSH_THEME_GIT_PROMPT_DIRTY="✗"
 
 git_prompt_info() {
-  if [[ -n "$vcs_info_msg_0_" ]]; then
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    local branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
     if git diff --quiet 2>/dev/null; then
-      echo "%{${fg_bold[green]}%}${vcs_info_msg_0_}🗸%{$reset_color%}"
+      echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${branch}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     else
-      echo "%{${fg_bold[green]}%}${vcs_info_msg_0_}✗%{$reset_color%}"
+      echo "${ZSH_THEME_GIT_PROMPT_PREFIX}${branch}${ZSH_THEME_GIT_PROMPT_DIRTY}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
     fi
   fi
 }
@@ -34,13 +32,13 @@ git_prompt_info() {
 # ///  PROMPT  /// #
 ####################
 
-PROMPT=" %{${fg_bold[blue]}%}[ %{${fg[red]}%}%n@%m:%~\$(git_prompt_info)%{${fg_bold[blue]}%} ]%{$reset_color%}
+PROMPT="%{${fg_bold[blue]}%}[ %{${fg[red]}%}%n@%m:%~\$(git_prompt_info)%{${fg_bold[blue]}%} ]%{$reset_color%}
  $ "
 
 
-##############################
-# ///  PLUGIN (manuali)  /// #
-##############################
+####################
+# ///  PLUGIN  /// #
+####################
 
 
 # Autosuggestions
@@ -57,6 +55,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 HISTFILE=~/.zsh_history
 
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
@@ -67,6 +67,7 @@ setopt EXTENDED_HISTORY
 # ///  KEYBINDS  /// #
 ######################
 
+stty -ixon
 bindkey -r '^S'
 
 
@@ -130,6 +131,6 @@ adbscr() {
 # ///  AUTOSTART  /// #
 #######################
 
-#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
-#    fastfetch
-#fi
+if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+    fastfetch
+fi
