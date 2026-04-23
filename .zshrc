@@ -32,6 +32,7 @@ zinit snippet OMZP::git
 zinit snippet OMZP::sudo
 zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
+zinit snippet OMZ::lib/key-bindings.zsh
 
 autoload -U compinit && compinit
 
