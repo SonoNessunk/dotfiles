@@ -34,7 +34,10 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit snippet OMZ::lib/key-bindings.zsh
 
-autoload -U compinit && compinit
+# devo capire se serve o meno, a quanto pare quando carico tramite zinit il zcompdump viene creato in automatico
+#mkdir -p "$XDG_CACHE_HOME/zsh"
+#autoload -Uz compinit
+#compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
 zinit cdreplay -q
 
@@ -49,11 +52,14 @@ HISTSIZE=100000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
+setopt append_history
+setopt share_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_find_no_dups
+
+setopt autocd
+setopt numeric_glob_sort
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
