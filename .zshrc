@@ -60,6 +60,7 @@ setopt hist_find_no_dups
 
 setopt autocd
 setopt numeric_glob_sort
+setopt correct
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
