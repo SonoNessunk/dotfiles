@@ -1,0 +1,19 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "SonoNessunk",
+                "Email": "sono.nessunk@gmail.com"
+            }
+        ],
+        "Name": "Nessk",
+        "Description": "Nessk's Theme",
+        "Id": "nessk",
+        "Version": "0.1",
+        "Category": "",
+        "EnabledByDefault": true,
+        "License": "GPL",
+        "Website": ""
+    },
+    "X-Plasma-API": "5.0"
+}

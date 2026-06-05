@@ -4,7 +4,6 @@ set tabsize 2
 set tabstospaces
 set linenumbers
 set autoindent
-set mouse
 
 set titlecolor white
 set statuscolor white
