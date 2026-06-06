@@ -18,8 +18,8 @@ if [[ -f "$HOME/.cargo/env" ]]; then
 fi
 
 # Script
-if [[ -d "$HOME/Scripts" ]]; then
-    export PATH="$HOME/Scripts:$PATH"
+if [[ -d "$HOME/scripts" ]]; then
+    export PATH="$HOME/scripts:$PATH"
 fi
 
 # Chrome
