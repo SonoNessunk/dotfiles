@@ -299,28 +299,36 @@ plugin=org.kde.plasma.panelspacer
 [Containments][55][General]
 AppletOrder=56;78;57;79;58;59;76;77
 
-[Containments][88]
+[Containments][90]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=503582ae-9e77-48f0-9a63-c9faae4606c6
-formfactor=0
-immutability=1
 lastScreen=0
-location=0
-plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][89]
+[Containments][90][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][90][Wallpaper][org.kde.image][General]
+Image=file:///home/sononessunk/Pictures/Wallpapers/arch.png
+SlidePaths=/usr/share/wallpapers/
+
+[Containments][91]
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=503582ae-9e77-48f0-9a63-c9faae4606c6
-formfactor=0
-immutability=1
 lastScreen=1
-location=0
-plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][91][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][91][Wallpaper][org.kde.image][General]
+Image=file:///home/sononessunk/Pictures/Wallpapers/arch.png
+SlidePaths=/usr/share/wallpapers/
 
 [ScreenMapping]
-itemsOnDisabledScreens=2,9db497bc-86aa-4b3c-8ec6-99fc75df3445,2,desktop:/VSprofile,desktop:/Backup profiles,0,9db497bc-86aa-4b3c-8ec6-99fc75df3445,2,desktop:/steam.desktop,desktop:/save639095116488077270.mdrg
+itemsOnDisabledScreens=0,9db497bc-86aa-4b3c-8ec6-99fc75df3445,2,desktop:/save639095116488077270.mdrg,desktop:/steam.desktop,2,9db497bc-86aa-4b3c-8ec6-99fc75df3445,2,desktop:/Backup profiles,desktop:/VSprofile
 screenMapping=
