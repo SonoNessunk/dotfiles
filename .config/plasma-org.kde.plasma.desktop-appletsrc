@@ -303,7 +303,11 @@ AppletOrder=56;78;57;79;58;59;76;77
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=503582ae-9e77-48f0-9a63-c9faae4606c6
+formfactor=0
+immutability=1
 lastScreen=0
+location=0
+plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.image
 
 [Containments][90][ConfigDialog]
@@ -318,7 +322,11 @@ SlidePaths=/usr/share/wallpapers/
 ItemGeometries-1920x1080=
 ItemGeometriesHorizontal=
 activityId=503582ae-9e77-48f0-9a63-c9faae4606c6
+formfactor=0
+immutability=1
 lastScreen=1
+location=0
+plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.image
 
 [Containments][91][ConfigDialog]
