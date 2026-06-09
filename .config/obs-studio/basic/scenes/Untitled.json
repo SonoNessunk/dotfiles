@@ -28,7 +28,7 @@
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
-        "monitoring_type": 1,
+        "monitoring_type": 2,
         "private_settings": {},
         "filters": [
             {
@@ -265,18 +265,18 @@
                 "device_id": "/dev/video0",
                 "Saturation": 0,
                 "Hue": 0,
-                "White Balance, Automatic": true,
-                "White Balance Temperature": 4200,
                 "Gain": 0,
-                "Sharpness": 0,
-                "Auto Exposure": 1,
-                "Exposure Time, Absolute": 250,
-                "Gamma": 110,
+                "Exposure Time, Absolute": 100,
+                "Focus, Absolute": 5,
+                "Exposure, Dynamic Framerate": false,
+                "Power Line Frequency": 0,
+                "Focus, Automatic Continuous": true,
                 "input": 0,
                 "pixelformat": 1196444237,
                 "resolution": 5497558139600,
                 "framerate": 30,
-                "color_range": 2
+                "color_range": 2,
+                "buffering": false
             },
             "mixers": 0,
             "sync": 0,
@@ -289,7 +289,10 @@
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "hotkeys": {},
+            "hotkeys": {
+                "CompositeBlur.Enable": [],
+                "CompositeBlur.Disable": []
+            },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
@@ -297,14 +300,21 @@
             "filters": [
                 {
                     "prev_ver": 536936450,
-                    "name": "Color Correction",
-                    "uuid": "7a4221be-936f-4e57-bbc6-61346dcf6b22",
-                    "id": "color_filter",
-                    "versioned_id": "color_filter_v2",
+                    "name": "Composite Blur",
+                    "uuid": "7e527dd4-2b87-46f5-b1d4-6a6dacd32fa1",
+                    "id": "obs_composite_blur",
+                    "versioned_id": "obs_composite_blur",
                     "settings": {
-                        "gamma": 0.0,
-                        "contrast": 0.0,
-                        "saturation": -1.0
+                        "pixelate_origin_x": 640.0,
+                        "pixelate_origin_y": 360.0,
+                        "center_x": 1507.0,
+                        "center_y": 285.0,
+                        "blur_algorithm": 1,
+                        "blur_type": 1,
+                        "radius": 30.0,
+                        "inactive_radius": 0.0,
+                        "angle": 45.0,
+                        "vector_source": ""
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -327,12 +337,138 @@
         },
         {
             "prev_ver": 536936450,
+            "name": "RUST is Love",
+            "uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
+            "id": "text_ft2_source",
+            "versioned_id": "text_ft2_source_v2",
+            "settings": {
+                "font": {
+                    "face": "Monocraft",
+                    "style": "Regular",
+                    "size": 215,
+                    "flags": 0
+                },
+                "outline": true,
+                "drop_shadow": true,
+                "text": "RUST is Love"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
+            "name": "MIC",
+            "uuid": "c5d46583-dc31-473a-9ac4-d3d928d33980",
+            "id": "text_ft2_source",
+            "versioned_id": "text_ft2_source_v2",
+            "settings": {
+                "text": "MIC Mutato",
+                "log_mode": false,
+                "custom_width": 0,
+                "font": {
+                    "face": "Monocraft",
+                    "style": "Regular",
+                    "size": 215,
+                    "flags": 0
+                },
+                "outline": true,
+                "drop_shadow": true,
+                "color1": 4278452479,
+                "color2": 4278452479
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
+            "name": "Image",
+            "uuid": "1a6234f6-2c01-4d2a-807f-3525ee7644e2",
+            "id": "image_source",
+            "versioned_id": "image_source",
+            "settings": {
+                "file": "/home/sononessunk/Pictures/Logo/Rust_programming_language_black_logo.svg.png",
+                "unload": false,
+                "linear_alpha": false
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
+            "name": "Image 2",
+            "uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
+            "id": "image_source",
+            "versioned_id": "image_source",
+            "settings": {
+                "file": "/home/sononessunk/Pictures/Logo/rustacean-orig-noshadow.png"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
             "name": "Scene",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 15,
+                "id_counter": 25,
                 "custom_size": false,
                 "items": [
                     {
@@ -393,7 +529,7 @@
                     {
                         "name": "Video Capture Device (V4L2)",
                         "source_uuid": "e9dc24a0-67ee-4d03-ada1-cf0e196add19",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -434,6 +570,226 @@
                             "x": 3.555555582046509,
                             "y": 2.0
                         },
+                        "scale_filter": "bilinear",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image",
+                        "source_uuid": "1a6234f6-2c01-4d2a-807f-3525ee7644e2",
+                        "visible": false,
+                        "locked": false,
+                        "rot": -25.641002655029297,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 21,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 379.5,
+                            "y": 336.0
+                        },
+                        "pos_rel": {
+                            "x": -1.0748157501220703,
+                            "y": -0.3776381015777588
+                        },
+                        "scale": {
+                            "x": 3.4800000190734863,
+                            "y": 3.4800000190734863
+                        },
+                        "scale_rel": {
+                            "x": 3.4800000190734863,
+                            "y": 3.4800000190734863
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image 2",
+                        "source_uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
+                        "visible": true,
+                        "locked": false,
+                        "rot": -22.699840545654297,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 25,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 58.0,
+                            "y": 310.5
+                        },
+                        "pos_rel": {
+                            "x": -1.67037034034729,
+                            "y": -0.42500001192092896
+                        },
+                        "scale": {
+                            "x": 1.128260850906372,
+                            "y": 1.1302931308746338
+                        },
+                        "scale_rel": {
+                            "x": 1.128260850906372,
+                            "y": 1.1302931308746338
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "RUST is Love",
+                        "source_uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 16,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 355.5,
+                            "y": 470.5
+                        },
+                        "pos_rel": {
+                            "x": -1.1190303564071655,
+                            "y": -0.12870371341705322
+                        },
+                        "scale": {
+                            "x": 0.7018308639526367,
+                            "y": 0.7020202279090881
+                        },
+                        "scale_rel": {
+                            "x": 0.7018308639526367,
+                            "y": 0.7020202279090881
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "MIC",
+                        "source_uuid": "c5d46583-dc31-473a-9ac4-d3d928d33980",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 20,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 1181.0,
+                            "y": 934.0
+                        },
+                        "pos_rel": {
+                            "x": 0.40925925970077515,
+                            "y": 0.729629635810852
+                        },
+                        "scale": {
+                            "x": 0.47980502247810364,
+                            "y": 0.47979798913002014
+                        },
+                        "scale_rel": {
+                            "x": 0.47980502247810364,
+                            "y": 0.47979798913002014
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
                         "scale_filter": "disable",
                         "blend_method": "default",
                         "blend_type": "normal",
@@ -462,8 +818,16 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.10": [],
                 "libobs.hide_scene_item.10": [],
+                "libobs.show_scene_item.16": [],
+                "libobs.hide_scene_item.16": [],
+                "libobs.show_scene_item.20": [],
+                "libobs.hide_scene_item.20": [],
                 "libobs.show_scene_item.13": [],
-                "libobs.hide_scene_item.13": []
+                "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.21": [],
+                "libobs.hide_scene_item.21": [],
+                "libobs.show_scene_item.25": [],
+                "libobs.hide_scene_item.25": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -581,17 +945,17 @@
     "transition_duration": 300,
     "transitions": [
         {
-            "name": "Slide (2)",
-            "id": "slide_transition",
-            "settings": {
-                "direction": "right"
-            }
-        },
-        {
             "name": "Slide",
             "id": "slide_transition",
             "settings": {
                 "direction": "left"
+            }
+        },
+        {
+            "name": "Slide (2)",
+            "id": "slide_transition",
+            "settings": {
+                "direction": "right"
             }
         }
     ],
@@ -621,7 +985,7 @@
     "saved_projectors": [],
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -69,
+    "scaling_level": -9,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {
