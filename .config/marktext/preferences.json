@@ -68,11 +68,11 @@
 	"customCss": "",
 	"imageRelativeDirectoryBase": "file",
 	"openedFilesInSidebar": true,
+	"lastOpenedFolder": "/home/sononessunk/Documents/MarkDown",
+	"treePathExcludePatterns": [],
 	"__internal__": {
 		"migrations": {
 			"version": "0.19.1"
 		}
-	},
-	"lastOpenedFolder": "/home/sononessunk/Documents/MarkDown",
-	"treePathExcludePatterns": []
+	}
 }

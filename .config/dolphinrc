@@ -3,6 +3,11 @@ MenuBar=Disabled
 [ContextMenu]
 ShowCopyMoveMenu=true
 
+[ExtractDialog]
+2 screens: Height=659
+2 screens: Width=1205
+DirHistory[$e]=$HOME/Games/old/
+
 [General]
 DoubleClickViewAction=none
 RememberOpenedTabs=false
@@ -16,5 +21,11 @@ Places Icons Static Size=22
 [MainWindow]
 MenuBar=Disabled
 
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
 [PreviewSettings]
 Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,opendocumentthumbnail,glycin-svg,svgthumbnail,textthumbnail
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
