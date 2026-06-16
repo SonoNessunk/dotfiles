@@ -9,7 +9,7 @@
         "settings": {
             "device_id": "alsa_input.usb-145f_Trust_GXT_232_Microphone-00.mono-fallback"
         },
-        "mixers": 255,
+        "mixers": 195,
         "sync": 0,
         "flags": 0,
         "volume": 1.0,
@@ -207,13 +207,13 @@
                     }
                 ]
             },
-            "mixers": 255,
+            "mixers": 197,
             "sync": 0,
             "flags": 0,
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": true,
+            "muted": false,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -463,14 +463,12 @@
         },
         {
             "prev_ver": 536936450,
-            "name": "Spotify",
-            "uuid": "ae4669c3-6ad1-400b-9afe-3e2fca24bba8",
-            "id": "pipewire_audio_application_capture",
-            "versioned_id": "pipewire_audio_application_capture",
-            "settings": {
-                "TargetName": "spotify"
-            },
-            "mixers": 255,
+            "name": "Game Capture",
+            "uuid": "42aa12ec-82b6-45b0-921f-525696fc5837",
+            "id": "vkcapture-source",
+            "versioned_id": "vkcapture-source",
+            "settings": {},
+            "mixers": 0,
             "sync": 0,
             "flags": 0,
             "volume": 1.0,
@@ -481,15 +479,36 @@
             "push-to-mute-delay": 0,
             "push-to-talk": false,
             "push-to-talk-delay": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.unmute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": []
-            },
+            "hotkeys": {},
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
-            "monitoring_type": 1,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
+            "name": "Screen Capture (PipeWire)",
+            "uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
+            "id": "pipewire-screen-capture-source",
+            "versioned_id": "pipewire-screen-capture-source",
+            "settings": {
+                "RestoreToken": "26677936-46c5-40d7-9a65-88b9ca66712c"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
             "private_settings": {}
         },
         {
@@ -499,7 +518,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 26,
+                "id_counter": 28,
                 "custom_size": false,
                 "items": [
                     {
@@ -833,8 +852,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Spotify",
-                        "source_uuid": "ae4669c3-6ad1-400b-9afe-3e2fca24bba8",
+                        "name": "Game Capture",
+                        "source_uuid": "42aa12ec-82b6-45b0-921f-525696fc5837",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -850,7 +869,62 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 26,
+                        "id": 27,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 931.0,
+                            "y": 524.0
+                        },
+                        "pos_rel": {
+                            "x": -0.05370370298624039,
+                            "y": -0.029629647731781006
+                        },
+                        "scale": {
+                            "x": 0.5151041746139526,
+                            "y": 0.5148147940635681
+                        },
+                        "scale_rel": {
+                            "x": 0.5151041746139526,
+                            "y": 0.5148147940635681
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Screen Capture (PipeWire)",
+                        "source_uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 28,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -861,12 +935,12 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.6499999761581421,
+                            "y": 0.6499999761581421
                         },
                         "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.6499999761581421,
+                            "y": 0.6499999761581421
                         },
                         "bounds": {
                             "x": 0.0,
@@ -914,8 +988,10 @@
                 "libobs.hide_scene_item.16": [],
                 "libobs.show_scene_item.20": [],
                 "libobs.hide_scene_item.20": [],
-                "libobs.show_scene_item.26": [],
-                "libobs.hide_scene_item.26": []
+                "libobs.show_scene_item.27": [],
+                "libobs.hide_scene_item.27": [],
+                "libobs.show_scene_item.28": [],
+                "libobs.hide_scene_item.28": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
