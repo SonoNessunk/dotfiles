@@ -67,7 +67,7 @@
 	"darkModeTheme": "dark",
 	"customCss": "",
 	"imageRelativeDirectoryBase": "file",
-	"openedFilesInSidebar": true,
+	"openedFilesInSidebar": false,
 	"lastOpenedFolder": "/home/sononessunk/Documents/MarkDown",
 	"treePathExcludePatterns": [],
 	"__internal__": {

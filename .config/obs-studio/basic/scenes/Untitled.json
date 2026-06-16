@@ -305,15 +305,15 @@
                     "id": "obs_composite_blur",
                     "versioned_id": "obs_composite_blur",
                     "settings": {
-                        "pixelate_origin_x": 640.0,
-                        "pixelate_origin_y": 360.0,
                         "center_x": 1507.0,
                         "center_y": 285.0,
                         "blur_algorithm": 1,
                         "blur_type": 1,
-                        "radius": 30.0,
                         "inactive_radius": 0.0,
                         "angle": 45.0,
+                        "radius": 30.0,
+                        "pixelate_origin_x": 640.0,
+                        "pixelate_origin_y": 360.0,
                         "vector_source": ""
                     },
                     "mixers": 0,
@@ -342,6 +342,7 @@
             "id": "text_ft2_source",
             "versioned_id": "text_ft2_source_v2",
             "settings": {
+                "text": "RUST is Love",
                 "font": {
                     "face": "Monocraft",
                     "style": "Regular",
@@ -349,8 +350,7 @@
                     "flags": 0
                 },
                 "outline": true,
-                "drop_shadow": true,
-                "text": "RUST is Love"
+                "drop_shadow": true
             },
             "mixers": 0,
             "sync": 0,
@@ -463,18 +463,49 @@
         },
         {
             "prev_ver": 536936450,
+            "name": "Spotify",
+            "uuid": "ae4669c3-6ad1-400b-9afe-3e2fca24bba8",
+            "id": "pipewire_audio_application_capture",
+            "versioned_id": "pipewire_audio_application_capture",
+            "settings": {
+                "TargetName": "spotify"
+            },
+            "mixers": 255,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.unmute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 1,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
             "name": "Scene",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 25,
+                "id_counter": 26,
                 "custom_size": false,
                 "items": [
                     {
                         "name": "ALL",
                         "source_uuid": "20806dc0-7cb1-403e-8b9c-41ea44eaddea",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -529,7 +560,7 @@
                     {
                         "name": "Video Capture Device (V4L2)",
                         "source_uuid": "e9dc24a0-67ee-4d03-ada1-cf0e196add19",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -639,7 +670,7 @@
                     {
                         "name": "Image 2",
                         "source_uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": -22.699840545654297,
                         "scale_ref": {
@@ -694,7 +725,7 @@
                     {
                         "name": "RUST is Love",
                         "source_uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -800,6 +831,61 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Spotify",
+                        "source_uuid": "ae4669c3-6ad1-400b-9afe-3e2fca24bba8",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 26,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -818,16 +904,18 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.10": [],
                 "libobs.hide_scene_item.10": [],
-                "libobs.show_scene_item.16": [],
-                "libobs.hide_scene_item.16": [],
-                "libobs.show_scene_item.20": [],
-                "libobs.hide_scene_item.20": [],
                 "libobs.show_scene_item.13": [],
                 "libobs.hide_scene_item.13": [],
                 "libobs.show_scene_item.21": [],
                 "libobs.hide_scene_item.21": [],
                 "libobs.show_scene_item.25": [],
-                "libobs.hide_scene_item.25": []
+                "libobs.hide_scene_item.25": [],
+                "libobs.show_scene_item.16": [],
+                "libobs.hide_scene_item.16": [],
+                "libobs.show_scene_item.20": [],
+                "libobs.hide_scene_item.20": [],
+                "libobs.show_scene_item.26": [],
+                "libobs.hide_scene_item.26": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -945,17 +1033,17 @@
     "transition_duration": 300,
     "transitions": [
         {
-            "name": "Slide",
-            "id": "slide_transition",
-            "settings": {
-                "direction": "left"
-            }
-        },
-        {
             "name": "Slide (2)",
             "id": "slide_transition",
             "settings": {
                 "direction": "right"
+            }
+        },
+        {
+            "name": "Slide",
+            "id": "slide_transition",
+            "settings": {
+                "direction": "left"
             }
         }
     ],
