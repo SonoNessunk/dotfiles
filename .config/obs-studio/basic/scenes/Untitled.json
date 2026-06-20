@@ -28,7 +28,7 @@
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
-        "monitoring_type": 2,
+        "monitoring_type": 0,
         "private_settings": {},
         "filters": [
             {
@@ -226,7 +226,7 @@
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
-            "monitoring_type": 0,
+            "monitoring_type": 2,
             "private_settings": {}
         },
         {
@@ -254,86 +254,6 @@
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "private_settings": {}
-        },
-        {
-            "prev_ver": 536936450,
-            "name": "Video Capture Device (V4L2)",
-            "uuid": "e9dc24a0-67ee-4d03-ada1-cf0e196add19",
-            "id": "v4l2_input",
-            "versioned_id": "v4l2_input",
-            "settings": {
-                "device_id": "/dev/video0",
-                "Saturation": 0,
-                "Hue": 0,
-                "Gain": 0,
-                "Exposure Time, Absolute": 100,
-                "Focus, Absolute": 5,
-                "Exposure, Dynamic Framerate": false,
-                "Power Line Frequency": 0,
-                "Focus, Automatic Continuous": true,
-                "input": 0,
-                "pixelformat": 1196444237,
-                "resolution": 5497558139600,
-                "framerate": 30,
-                "color_range": 2,
-                "buffering": false
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {
-                "CompositeBlur.Enable": [],
-                "CompositeBlur.Disable": []
-            },
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {},
-            "filters": [
-                {
-                    "prev_ver": 536936450,
-                    "name": "Composite Blur",
-                    "uuid": "7e527dd4-2b87-46f5-b1d4-6a6dacd32fa1",
-                    "id": "obs_composite_blur",
-                    "versioned_id": "obs_composite_blur",
-                    "settings": {
-                        "center_x": 1507.0,
-                        "center_y": 285.0,
-                        "blur_algorithm": 1,
-                        "blur_type": 1,
-                        "inactive_radius": 0.0,
-                        "angle": 45.0,
-                        "radius": 30.0,
-                        "pixelate_origin_x": 640.0,
-                        "pixelate_origin_y": 360.0,
-                        "vector_source": ""
-                    },
-                    "mixers": 0,
-                    "sync": 0,
-                    "flags": 0,
-                    "volume": 1.0,
-                    "balance": 0.5,
-                    "enabled": true,
-                    "muted": false,
-                    "push-to-mute": false,
-                    "push-to-mute-delay": 0,
-                    "push-to-talk": false,
-                    "push-to-talk-delay": 0,
-                    "hotkeys": {},
-                    "deinterlace_mode": 0,
-                    "deinterlace_field_order": 0,
-                    "monitoring_type": 0,
-                    "private_settings": {}
-                }
-            ]
         },
         {
             "prev_ver": 536936450,
@@ -463,36 +383,12 @@
         },
         {
             "prev_ver": 536936450,
-            "name": "Game Capture",
-            "uuid": "42aa12ec-82b6-45b0-921f-525696fc5837",
-            "id": "vkcapture-source",
-            "versioned_id": "vkcapture-source",
-            "settings": {},
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
-            "monitoring_type": 0,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536936450,
             "name": "Screen Capture (PipeWire)",
             "uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "26677936-46c5-40d7-9a65-88b9ca66712c"
+                "RestoreToken": "n54t2fAxUCfxDj0VhJLThw"
             },
             "mixers": 0,
             "sync": 0,
@@ -513,12 +409,115 @@
         },
         {
             "prev_ver": 536936450,
+            "name": "Input Overlay",
+            "uuid": "837be09c-8fe5-44ef-bd08-8b5acc3941c0",
+            "id": "input-overlay",
+            "versioned_id": "input-overlay",
+            "settings": {
+                "io.input_source": "This computer",
+                "io.overlay_image": "/usr/share/obs/obs-plugins/input-overlay/presets/xbox-controller/xbox-controller.png",
+                "io.controller_id": "0 SHANWAN Android Gamepad - Game Controller",
+                "io.layout_file": "/usr/share/obs/obs-plugins/input-overlay/presets/xbox-controller/xbox-controller.json"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
+            "name": "Camera",
+            "uuid": "f10e075f-15dd-4ae3-9e6f-a10451a3b3c1",
+            "id": "v4l2_input",
+            "versioned_id": "v4l2_input",
+            "settings": {
+                "device_id": "/dev/video0",
+                "Saturation": 0,
+                "Focus, Absolute": 300,
+                "Focus, Automatic Continuous": false,
+                "input": 0,
+                "pixelformat": 1196444237,
+                "resolution": 8246337209400,
+                "framerate": 30,
+                "color_range": 2
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "CompositeBlur.Enable": [],
+                "CompositeBlur.Disable": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {},
+            "filters": [
+                {
+                    "prev_ver": 536936450,
+                    "name": "Composite Blur",
+                    "uuid": "94088d1b-cae6-49c4-b4cd-ebe7f30e70d2",
+                    "id": "obs_composite_blur",
+                    "versioned_id": "obs_composite_blur",
+                    "settings": {
+                        "center_x": 960.0,
+                        "center_y": 540.0,
+                        "blur_algorithm": 1,
+                        "blur_type": 1,
+                        "pixelate_smoothing_pct": 100.0,
+                        "pixelate_type": 6,
+                        "radius": 25.0,
+                        "passes": 5,
+                        "pixelate_origin_x": -6000.0,
+                        "pixelate_origin_y": -6000.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                }
+            ]
+        },
+        {
+            "prev_ver": 536936450,
             "name": "Scene",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 28,
+                "id_counter": 34,
                 "custom_size": false,
                 "items": [
                     {
@@ -577,9 +576,9 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Video Capture Device (V4L2)",
-                        "source_uuid": "e9dc24a0-67ee-4d03-ada1-cf0e196add19",
-                        "visible": false,
+                        "name": "Camera",
+                        "source_uuid": "f10e075f-15dd-4ae3-9e6f-a10451a3b3c1",
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -587,14 +586,14 @@
                             "y": 1080.0
                         },
                         "align": 5,
-                        "bounds_type": 1,
+                        "bounds_type": 0,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 13,
+                        "id": 32,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -613,14 +612,14 @@
                             "y": 1.0
                         },
                         "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "bounds_rel": {
-                            "x": 3.555555582046509,
-                            "y": 2.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
-                        "scale_filter": "bilinear",
+                        "scale_filter": "disable",
                         "blend_method": "default",
                         "blend_type": "normal",
                         "show_transition": {
@@ -689,7 +688,7 @@
                     {
                         "name": "Image 2",
                         "source_uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": -22.699840545654297,
                         "scale_ref": {
@@ -707,20 +706,20 @@
                         "id": 25,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 58.0,
-                            "y": 310.5
+                            "x": 27.0,
+                            "y": 857.0
                         },
                         "pos_rel": {
-                            "x": -1.67037034034729,
-                            "y": -0.42500001192092896
+                            "x": -1.7277777194976807,
+                            "y": 0.5870370864868164
                         },
                         "scale": {
-                            "x": 1.128260850906372,
-                            "y": 1.1302931308746338
+                            "x": 0.593478262424469,
+                            "y": 0.5928338766098022
                         },
                         "scale_rel": {
-                            "x": 1.128260850906372,
-                            "y": 1.1302931308746338
+                            "x": 0.593478262424469,
+                            "y": 0.5928338766098022
                         },
                         "bounds": {
                             "x": 0.0,
@@ -744,7 +743,7 @@
                     {
                         "name": "RUST is Love",
                         "source_uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -762,20 +761,20 @@
                         "id": 16,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 355.5,
-                            "y": 470.5
+                            "x": 217.0,
+                            "y": 935.5
                         },
                         "pos_rel": {
-                            "x": -1.1190303564071655,
-                            "y": -0.12870371341705322
+                            "x": -1.375925898551941,
+                            "y": 0.7324074506759644
                         },
                         "scale": {
-                            "x": 0.7018308639526367,
-                            "y": 0.7020202279090881
+                            "x": 0.39024388790130615,
+                            "y": 0.3888888955116272
                         },
                         "scale_rel": {
-                            "x": 0.7018308639526367,
-                            "y": 0.7020202279090881
+                            "x": 0.39024388790130615,
+                            "y": 0.3888888955116272
                         },
                         "bounds": {
                             "x": 0.0,
@@ -852,8 +851,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Game Capture",
-                        "source_uuid": "42aa12ec-82b6-45b0-921f-525696fc5837",
+                        "name": "Screen Capture (PipeWire)",
+                        "source_uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -862,38 +861,38 @@
                             "y": 1080.0
                         },
                         "align": 5,
-                        "bounds_type": 0,
+                        "bounds_type": 1,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 27,
+                        "id": 28,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 931.0,
-                            "y": 524.0
+                            "x": 39.0,
+                            "y": 34.0
                         },
                         "pos_rel": {
-                            "x": -0.05370370298624039,
-                            "y": -0.029629647731781006
+                            "x": -1.7055555582046509,
+                            "y": -0.9370370507240295
                         },
                         "scale": {
-                            "x": 0.5151041746139526,
-                            "y": 0.5148147940635681
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_rel": {
-                            "x": 0.5151041746139526,
-                            "y": 0.5148147940635681
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 545.0,
+                            "y": 307.0
                         },
                         "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1.0092592239379883,
+                            "y": 0.5685185194015503
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -907,8 +906,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Screen Capture (PipeWire)",
-                        "source_uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
+                        "name": "Input Overlay",
+                        "source_uuid": "837be09c-8fe5-44ef-bd08-8b5acc3941c0",
                         "visible": true,
                         "locked": false,
                         "rot": 0.0,
@@ -924,23 +923,23 @@
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 28,
+                        "id": 31,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1590.0,
+                            "y": 844.0
                         },
                         "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
+                            "x": 1.1666666269302368,
+                            "y": 0.5629630088806152
                         },
                         "scale": {
-                            "x": 0.6499999761581421,
-                            "y": 0.6499999761581421
+                            "x": 0.14501953125,
+                            "y": 0.14492753148078918
                         },
                         "scale_rel": {
-                            "x": 0.6499999761581421,
-                            "y": 0.6499999761581421
+                            "x": 0.14501953125,
+                            "y": 0.14492753148078918
                         },
                         "bounds": {
                             "x": 0.0,
@@ -978,8 +977,8 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.10": [],
                 "libobs.hide_scene_item.10": [],
-                "libobs.show_scene_item.13": [],
-                "libobs.hide_scene_item.13": [],
+                "libobs.show_scene_item.32": [],
+                "libobs.hide_scene_item.32": [],
                 "libobs.show_scene_item.21": [],
                 "libobs.hide_scene_item.21": [],
                 "libobs.show_scene_item.25": [],
@@ -988,10 +987,10 @@
                 "libobs.hide_scene_item.16": [],
                 "libobs.show_scene_item.20": [],
                 "libobs.hide_scene_item.20": [],
-                "libobs.show_scene_item.27": [],
-                "libobs.hide_scene_item.27": [],
                 "libobs.show_scene_item.28": [],
-                "libobs.hide_scene_item.28": []
+                "libobs.hide_scene_item.28": [],
+                "libobs.show_scene_item.31": [],
+                "libobs.hide_scene_item.31": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1109,17 +1108,17 @@
     "transition_duration": 300,
     "transitions": [
         {
-            "name": "Slide (2)",
-            "id": "slide_transition",
-            "settings": {
-                "direction": "right"
-            }
-        },
-        {
             "name": "Slide",
             "id": "slide_transition",
             "settings": {
                 "direction": "left"
+            }
+        },
+        {
+            "name": "Slide (2)",
+            "id": "slide_transition",
+            "settings": {
+                "direction": "right"
             }
         }
     ],
