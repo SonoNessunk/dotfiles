@@ -28,7 +28,7 @@
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
-        "monitoring_type": 0,
+        "monitoring_type": 2,
         "private_settings": {},
         "filters": [
             {
@@ -388,7 +388,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "n54t2fAxUCfxDj0VhJLThw"
+                "RestoreToken": "zJeml9L0xt4Y_ZGNXrUuCg"
             },
             "mixers": 0,
             "sync": 0,
@@ -512,12 +512,38 @@
         },
         {
             "prev_ver": 536936450,
+            "name": "Screen Capture (PipeWire) 3",
+            "uuid": "1b47360a-1577-4d09-9eb4-e937e1723074",
+            "id": "pipewire-screen-capture-source",
+            "versioned_id": "pipewire-screen-capture-source",
+            "settings": {
+                "RestoreToken": "Cacrut6xK85MA_b6wwQNlQ"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536936450,
             "name": "Scene",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 34,
+                "id_counter": 35,
                 "custom_size": false,
                 "items": [
                     {
@@ -578,7 +604,7 @@
                     {
                         "name": "Camera",
                         "source_uuid": "f10e075f-15dd-4ae3-9e6f-a10451a3b3c1",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -853,7 +879,7 @@
                     {
                         "name": "Screen Capture (PipeWire)",
                         "source_uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -959,6 +985,61 @@
                             "duration": 300
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "Screen Capture (PipeWire) 3",
+                        "source_uuid": "1b47360a-1577-4d09-9eb4-e937e1723074",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 35,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -990,7 +1071,9 @@
                 "libobs.show_scene_item.28": [],
                 "libobs.hide_scene_item.28": [],
                 "libobs.show_scene_item.31": [],
-                "libobs.hide_scene_item.31": []
+                "libobs.hide_scene_item.31": [],
+                "libobs.show_scene_item.35": [],
+                "libobs.hide_scene_item.35": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
