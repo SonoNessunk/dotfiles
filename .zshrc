@@ -94,24 +94,30 @@ y() {
 adbscr() {
   local host="${1:-${IP:-192.168.1.100}}"
   local port out
+ 
   if ! command -v nmap >/dev/null 2>&1; then
-    echo "Error: nmap not installed"
+    echo "Error: nmap not installed" >&2
     return 1
   fi
-  # Scansiona porte e leggi una per volta; -Pn evita il ping, -T4 velocizza, --open mostra solo porte aperte
+
+  echo "Scanning $host for open ports..."
+
   while read -r port; do
-    [ -z "$port" ] && continue
+    [[ -z "$port" ]] && continue
+    
     printf "Trying %s:%s" "$host" "$port"
-    out=$(timeout 6 adb connect "$host:$port" 2>&1) || true
+
+    out=$(timeout 3 adb connect "$host:$port" 2>&1) || true
+    
     if printf '%s' "$out" | grep -qiE 'connected to|already connected to'; then
-      echo " - Connected"
-      # mirror.sh
+      echo " | Connected"
       return 0
     else
-      echo " - Failed"
+      echo " | Failed"
       adb disconnect "$host:$port" >/dev/null 2>&1 || true
     fi
-  done < <(nmap "$host" -p- --open -Pn -T4 2>/dev/null | awk '/\/tcp/ {print $1}')
-  echo "Check Debug Wireless, none of the available ports are ADB"
+  done < <(nmap "$host" -p 5555,30000-50000 --open -Pn -T4 2>/dev/null | awk -F'/' '/\/tcp/ {print $1}')
+  
+  echo "Error: Wireless Debugging active? None of the open ports responded to ADB."
   return 2
 }
