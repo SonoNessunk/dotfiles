@@ -100,6 +100,8 @@ adbscr() {
     return 1
   fi
 
+  adb start-server >/dev/null 2>&1
+
   echo "Scanning $host for open ports..."
 
   while read -r port; do
@@ -111,6 +113,16 @@ adbscr() {
     
     if printf '%s' "$out" | grep -qiE 'connected to|already connected to'; then
       echo " | Connected"
+      
+      if [ "$port" != "5555" ]; then
+        echo "Switching device to permanent port 5555..."
+        # Diciamo ad ADB (tramite la porta temporanea) di riavviarsi sulla 5555
+        adb -s "$host:$port" tcpip 5555 >/dev/null 2>&1
+        sleep 1
+        # Ci colleghiamo subito alla 5555 fissa e puliamo la porta temporanea
+        adb connect "$host:5555" >/dev/null 2>&1
+        adb disconnect "$host:$port" >/dev/null 2>&1
+      fi
       return 0
     else
       echo " | Failed"
