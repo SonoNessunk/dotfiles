@@ -21,7 +21,7 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
-source /usr/share/nvm/init-nvm.sh
+[[ -r /usr/share/nvm/init-nvm.sh ]] && source /usr/share/nvm/init-nvm.sh
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-completions
@@ -67,8 +67,8 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-alias ls='ls --color'
-alias update='sudo pacman -Syu --noconfirm; paru -Sua --noconfirm'
+alias ls='ls --color -1'
+alias update='sudo pacman -Syu --noconfirm && paru -Sua --noconfirm'
 alias ssh-pala='ssh -i ~/.ssh/ssh-tunnel-pala pala@0pala.ddnsfree.com'
 eval "$(fzf --zsh)"
 
