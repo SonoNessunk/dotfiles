@@ -2,9 +2,9 @@
 # AUTOSTART #
 #############
 
-if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
-    fastfetch
-fi
+#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+#    fastfetch
+#fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -16,7 +16,7 @@ fi
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
+  mkdir -p "$(dirname "$ZINIT_HOME")"
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
@@ -60,7 +60,6 @@ setopt hist_find_no_dups
 
 setopt autocd
 setopt numeric_glob_sort
-setopt correct
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
@@ -84,17 +83,16 @@ tm() {
 
 y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
+	command yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-  echo -ne "\e[5 q"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
 }
 
 adbscr() {
   local host="${1:-${IP:-192.168.1.100}}"
   local port out
- 
+
   if ! command -v nmap >/dev/null 2>&1; then
     echo "Error: nmap not installed" >&2
     return 1
@@ -106,14 +104,14 @@ adbscr() {
 
   while read -r port; do
     [[ -z "$port" ]] && continue
-    
+
     printf "Trying %s:%s" "$host" "$port"
 
     out=$(timeout 3 adb connect "$host:$port" 2>&1) || true
-    
+
     if printf '%s' "$out" | grep -qiE 'connected to|already connected to'; then
       echo " | Connected"
-      
+
       if [ "$port" != "5555" ]; then
         echo "Switching device to permanent port 5555..."
         # Diciamo ad ADB (tramite la porta temporanea) di riavviarsi sulla 5555
@@ -129,7 +127,7 @@ adbscr() {
       adb disconnect "$host:$port" >/dev/null 2>&1 || true
     fi
   done < <(nmap "$host" -p 5555,30000-50000 --open -Pn -T4 2>/dev/null | awk -F'/' '/\/tcp/ {print $1}')
-  
+
   echo "Error: Wireless Debugging active? None of the open ports responded to ADB."
   return 2
 }

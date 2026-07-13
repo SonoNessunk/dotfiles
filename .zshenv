@@ -3,6 +3,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
+export GTK_USE_PORTAL=1
+
 export EDITOR="nano"
 export VISUAL="nano"
 
@@ -18,13 +20,13 @@ if [[ -d "$HOME/Scripts" ]]; then
 fi
 
 # Chrome
-if command -v google-chrome-stable &>/dev/null; then
+if [[ -x /usr/bin/google-chrome-stable ]]; then
     export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 fi
 
 # GDBK
 if [[ -d "/opt/gbdk" ]]; then
-    export GBDK_HOME=/opt/gbdk/
-    export GBDKDIR=/opt/gbdk/
+    export GBDK_HOME=/opt/gbdk
+    export GBDKDIR=/opt/gbdk
     export PATH=$PATH:/opt/gbdk/bin
 fi

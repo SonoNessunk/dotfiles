@@ -7,7 +7,7 @@
 	"zoom": 1,
 	"hideScrollbar": false,
 	"wordWrapInToc": false,
-	"fileSortBy": "created",
+	"fileSortBy": "title",
 	"startUpAction": "openLastFolder",
 	"language": "en",
 	"editorFontFamily": "CaskaydiaMono Nerd Font Mono",
