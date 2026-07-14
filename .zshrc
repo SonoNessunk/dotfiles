@@ -69,6 +69,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 alias ls='ls --color -1'
 alias update='sudo pacman -Syu --noconfirm && paru -Sua --noconfirm'
 alias ssh-pala='ssh -i ~/.ssh/ssh-tunnel-pala pala@0pala.ddnsfree.com'
+
 eval "$(fzf --zsh)"
 
 #############
