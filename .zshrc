@@ -2,9 +2,9 @@
 # AUTOSTART #
 #############
 
-#if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
-#    fastfetch
-#fi
+if [ "$TERM_PROGRAM" != "vscode" ] && command -v fastfetch &> /dev/null; then
+    fastfetch
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
