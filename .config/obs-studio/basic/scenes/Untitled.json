@@ -7,7 +7,7 @@
         "id": "pulse_input_capture",
         "versioned_id": "pulse_input_capture",
         "settings": {
-            "device_id": "alsa_input.usb-145f_Trust_GXT_232_Microphone-00.mono-fallback"
+            "device_id": "alsa_input.usb-145f_Trust_GXT_232_Microphone-00.pro-input-0"
         },
         "mixers": 195,
         "sync": 0,
@@ -226,32 +226,6 @@
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
-            "monitoring_type": 2,
-            "private_settings": {}
-        },
-        {
-            "prev_ver": 536936450,
-            "name": "Screen Capture (PipeWire) 2",
-            "uuid": "e34267c4-d3bc-4bcd-bfa8-72e4ac585bc2",
-            "id": "pipewire-screen-capture-source",
-            "versioned_id": "pipewire-screen-capture-source",
-            "settings": {
-                "RestoreToken": "02f237c1-2f1b-4899-8512-22069d28f1c1"
-            },
-            "mixers": 0,
-            "sync": 0,
-            "flags": 0,
-            "volume": 1.0,
-            "balance": 0.5,
-            "enabled": true,
-            "muted": false,
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "hotkeys": {},
-            "deinterlace_mode": 0,
-            "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "private_settings": {}
         },
@@ -388,7 +362,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "zJeml9L0xt4Y_ZGNXrUuCg"
+                "RestoreToken": "M0yXLCopRG9_bNJTNlTugw"
             },
             "mixers": 0,
             "sync": 0,
@@ -415,8 +389,8 @@
             "versioned_id": "input-overlay",
             "settings": {
                 "io.input_source": "This computer",
-                "io.overlay_image": "/usr/share/obs/obs-plugins/input-overlay/presets/xbox-controller/xbox-controller.png",
                 "io.controller_id": "0 SHANWAN Android Gamepad - Game Controller",
+                "io.overlay_image": "/usr/share/obs/obs-plugins/input-overlay/presets/xbox-controller/xbox-controller.png",
                 "io.layout_file": "/usr/share/obs/obs-plugins/input-overlay/presets/xbox-controller/xbox-controller.json"
             },
             "mixers": 0,
@@ -438,15 +412,22 @@
         },
         {
             "prev_ver": 536936450,
-            "name": "Camera",
-            "uuid": "f10e075f-15dd-4ae3-9e6f-a10451a3b3c1",
+            "name": "Video Capture Device (V4L2)",
+            "uuid": "9f713c30-7f0f-4d23-a5dc-716f47c9b460",
             "id": "v4l2_input",
             "versioned_id": "v4l2_input",
             "settings": {
-                "device_id": "/dev/video0",
-                "Saturation": 0,
-                "Focus, Absolute": 300,
-                "Focus, Automatic Continuous": false,
+                "device_id": "/dev/video1",
+                "Contrast": 30,
+                "Hue": 0,
+                "Gamma": 110,
+                "Power Line Frequency": 0,
+                "Sharpness": 0,
+                "Backlight Compensation": 0,
+                "Auto Exposure": 1,
+                "Exposure Time, Absolute": 200,
+                "Focus, Automatic Continuous": true,
+                "Focus, Absolute": 800,
                 "input": 0,
                 "pixelformat": 1196444237,
                 "resolution": 8246337209400,
@@ -476,7 +457,7 @@
                 {
                     "prev_ver": 536936450,
                     "name": "Composite Blur",
-                    "uuid": "94088d1b-cae6-49c4-b4cd-ebe7f30e70d2",
+                    "uuid": "6019dc66-2666-4bc8-a441-64fe7004209a",
                     "id": "obs_composite_blur",
                     "versioned_id": "obs_composite_blur",
                     "settings": {
@@ -484,19 +465,43 @@
                         "center_y": 540.0,
                         "blur_algorithm": 1,
                         "blur_type": 1,
-                        "pixelate_smoothing_pct": 100.0,
-                        "pixelate_type": 6,
-                        "radius": 25.0,
-                        "passes": 5,
-                        "pixelate_origin_x": -6000.0,
-                        "pixelate_origin_y": -6000.0
+                        "radius": 10.0,
+                        "pixelate_origin_x": 960.0,
+                        "pixelate_origin_y": 540.0
                     },
                     "mixers": 0,
                     "sync": 0,
                     "flags": 0,
                     "volume": 1.0,
                     "balance": 0.5,
-                    "enabled": true,
+                    "enabled": false,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 536936450,
+                    "name": "Color Correction",
+                    "uuid": "0c115768-39e4-4696-9169-22e5939c116f",
+                    "id": "color_filter",
+                    "versioned_id": "color_filter_v2",
+                    "settings": {
+                        "contrast": -0.79,
+                        "saturation": -1.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": false,
                     "muted": false,
                     "push-to-mute": false,
                     "push-to-mute-delay": 0,
@@ -513,11 +518,11 @@
         {
             "prev_ver": 536936450,
             "name": "Screen Capture (PipeWire) 3",
-            "uuid": "1b47360a-1577-4d09-9eb4-e937e1723074",
+            "uuid": "b0f0da4b-6dee-4225-988d-f4d003a68931",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "Cacrut6xK85MA_b6wwQNlQ"
+                "RestoreToken": "_WfoB7WzXLRpJnn6ypuTNw"
             },
             "mixers": 0,
             "sync": 0,
@@ -543,7 +548,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 35,
+                "id_counter": 47,
                 "custom_size": false,
                 "items": [
                     {
@@ -602,8 +607,8 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "Camera",
-                        "source_uuid": "f10e075f-15dd-4ae3-9e6f-a10451a3b3c1",
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "9f713c30-7f0f-4d23-a5dc-716f47c9b460",
                         "visible": false,
                         "locked": false,
                         "rot": 0.0,
@@ -612,14 +617,14 @@
                             "y": 1080.0
                         },
                         "align": 5,
-                        "bounds_type": 0,
+                        "bounds_type": 1,
                         "bounds_align": 0,
                         "bounds_crop": false,
                         "crop_left": 0,
                         "crop_top": 0,
                         "crop_right": 0,
                         "crop_bottom": 0,
-                        "id": 32,
+                        "id": 45,
                         "group_item_backup": false,
                         "pos": {
                             "x": 0.0,
@@ -638,12 +643,12 @@
                             "y": 1.0
                         },
                         "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 1920.0,
+                            "y": 1080.0
                         },
                         "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
+                            "x": 3.555555582046509,
+                            "y": 2.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -677,12 +682,12 @@
                         "id": 21,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 379.5,
+                            "x": 426.0,
                             "y": 336.0
                         },
                         "pos_rel": {
-                            "x": -1.0748157501220703,
-                            "y": -0.3776381015777588
+                            "x": -0.9888888597488403,
+                            "y": -0.37777775526046753
                         },
                         "scale": {
                             "x": 3.4800000190734863,
@@ -714,7 +719,7 @@
                     {
                         "name": "Image 2",
                         "source_uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": -22.699840545654297,
                         "scale_ref": {
@@ -769,7 +774,7 @@
                     {
                         "name": "RUST is Love",
                         "source_uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -877,6 +882,61 @@
                         "private_settings": {}
                     },
                     {
+                        "name": "Screen Capture (PipeWire) 3",
+                        "source_uuid": "b0f0da4b-6dee-4225-988d-f4d003a68931",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 1,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 44,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_rel": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "bounds": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "bounds_rel": {
+                            "x": 3.555555582046509,
+                            "y": 2.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
                         "name": "Screen Capture (PipeWire)",
                         "source_uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
                         "visible": false,
@@ -897,12 +957,12 @@
                         "id": 28,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 39.0,
-                            "y": 34.0
+                            "x": 1559.0,
+                            "y": 48.0
                         },
                         "pos_rel": {
-                            "x": -1.7055555582046509,
-                            "y": -0.9370370507240295
+                            "x": 1.1092592477798462,
+                            "y": -0.9111111164093018
                         },
                         "scale": {
                             "x": 1.0,
@@ -913,12 +973,177 @@
                             "y": 1.0
                         },
                         "bounds": {
-                            "x": 545.0,
-                            "y": 307.0
+                            "x": 291.5,
+                            "y": 285.0
                         },
                         "bounds_rel": {
-                            "x": 1.0092592239379883,
-                            "y": 0.5685185194015503
+                            "x": 0.539814829826355,
+                            "y": 0.5277777910232544
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "9f713c30-7f0f-4d23-a5dc-716f47c9b460",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 41,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 64.0,
+                            "y": 61.0
+                        },
+                        "pos_rel": {
+                            "x": -1.6592592000961304,
+                            "y": -0.8870370388031006
+                        },
+                        "scale": {
+                            "x": 0.30937498807907104,
+                            "y": 0.3097222149372101
+                        },
+                        "scale_rel": {
+                            "x": 0.30937498807907104,
+                            "y": 0.3097222149372101
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "RUST is Love",
+                        "source_uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 37,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 126.0,
+                            "y": 230.0
+                        },
+                        "pos_rel": {
+                            "x": -1.5444444417953491,
+                            "y": -0.5740740299224854
+                        },
+                        "scale": {
+                            "x": 0.17421603202819824,
+                            "y": 0.17171716690063477
+                        },
+                        "scale_rel": {
+                            "x": 0.17421603202819824,
+                            "y": 0.17171716690063477
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 300
+                        },
+                        "hide_transition": {
+                            "duration": 300
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Image 2",
+                        "source_uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
+                        "visible": false,
+                        "locked": false,
+                        "rot": -22.699840545654297,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 38,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 199.5
+                        },
+                        "pos_rel": {
+                            "x": -1.7777777910232544,
+                            "y": -0.6305555701255798
+                        },
+                        "scale": {
+                            "x": 0.3173913061618805,
+                            "y": 0.319218248128891
+                        },
+                        "scale_rel": {
+                            "x": 0.3173913061618805,
+                            "y": 0.319218248128891
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -934,7 +1159,7 @@
                     {
                         "name": "Input Overlay",
                         "source_uuid": "837be09c-8fe5-44ef-bd08-8b5acc3941c0",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "scale_ref": {
@@ -952,75 +1177,20 @@
                         "id": 31,
                         "group_item_backup": false,
                         "pos": {
-                            "x": 1590.0,
-                            "y": 844.0
+                            "x": 1513.0,
+                            "y": 812.0
                         },
                         "pos_rel": {
-                            "x": 1.1666666269302368,
-                            "y": 0.5629630088806152
+                            "x": 1.0240740776062012,
+                            "y": 0.5037037134170532
                         },
                         "scale": {
-                            "x": 0.14501953125,
-                            "y": 0.14492753148078918
+                            "x": 0.17431640625,
+                            "y": 0.1747182011604309
                         },
                         "scale_rel": {
-                            "x": 0.14501953125,
-                            "y": 0.14492753148078918
-                        },
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_rel": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    },
-                    {
-                        "name": "Screen Capture (PipeWire) 3",
-                        "source_uuid": "1b47360a-1577-4d09-9eb4-e937e1723074",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 35,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.17431640625,
+                            "y": 0.1747182011604309
                         },
                         "bounds": {
                             "x": 0.0,
@@ -1058,8 +1228,8 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.10": [],
                 "libobs.hide_scene_item.10": [],
-                "libobs.show_scene_item.32": [],
-                "libobs.hide_scene_item.32": [],
+                "libobs.show_scene_item.45": [],
+                "libobs.hide_scene_item.45": [],
                 "libobs.show_scene_item.21": [],
                 "libobs.hide_scene_item.21": [],
                 "libobs.show_scene_item.25": [],
@@ -1068,19 +1238,25 @@
                 "libobs.hide_scene_item.16": [],
                 "libobs.show_scene_item.20": [],
                 "libobs.hide_scene_item.20": [],
+                "libobs.show_scene_item.44": [],
+                "libobs.hide_scene_item.44": [],
                 "libobs.show_scene_item.28": [],
                 "libobs.hide_scene_item.28": [],
+                "libobs.show_scene_item.41": [],
+                "libobs.hide_scene_item.41": [],
+                "libobs.show_scene_item.37": [],
+                "libobs.hide_scene_item.37": [],
+                "libobs.show_scene_item.38": [],
+                "libobs.hide_scene_item.38": [],
                 "libobs.show_scene_item.31": [],
-                "libobs.hide_scene_item.31": [],
-                "libobs.show_scene_item.35": [],
-                "libobs.hide_scene_item.35": []
+                "libobs.hide_scene_item.31": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {
-                "transition": "Slide"
+                "transition": "Stinger"
             }
         },
         {
@@ -1090,65 +1266,9 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 1,
+                "id_counter": 2,
                 "custom_size": false,
-                "items": [
-                    {
-                        "name": "Screen Capture (PipeWire) 2",
-                        "source_uuid": "e34267c4-d3bc-4bcd-bfa8-72e4ac585bc2",
-                        "visible": false,
-                        "locked": false,
-                        "rot": 0.0,
-                        "scale_ref": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "align": 5,
-                        "bounds_type": 1,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 1,
-                        "group_item_backup": false,
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "pos_rel": {
-                            "x": -1.7777777910232544,
-                            "y": -1.0
-                        },
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "bounds": {
-                            "x": 1920.0,
-                            "y": 1080.0
-                        },
-                        "bounds_rel": {
-                            "x": 3.555555582046509,
-                            "y": 2.0
-                        },
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 300
-                        },
-                        "hide_transition": {
-                            "duration": 300
-                        },
-                        "private_settings": {}
-                    }
-                ]
+                "items": []
             },
             "mixers": 0,
             "sync": 0,
@@ -1162,16 +1282,14 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.show_scene_item.1": [],
-                "libobs.hide_scene_item.1": []
+                "OBSBasic.SelectScene": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {
-                "transition": "Slide (2)"
+                "transition": "Stinger"
             }
         }
     ],
@@ -1187,21 +1305,26 @@
     "current_scene": "Scene",
     "current_program_scene": "Scene",
     "canvases": [],
-    "current_transition": "Slide (2)",
+    "current_transition": "Stinger",
     "transition_duration": 300,
     "transitions": [
-        {
-            "name": "Slide",
-            "id": "slide_transition",
-            "settings": {
-                "direction": "left"
-            }
-        },
         {
             "name": "Slide (2)",
             "id": "slide_transition",
             "settings": {
                 "direction": "right"
+            }
+        },
+        {
+            "name": "Stinger",
+            "id": "obs_stinger_transition",
+            "settings": {}
+        },
+        {
+            "name": "Slide",
+            "id": "slide_transition",
+            "settings": {
+                "direction": "left"
             }
         }
     ],
@@ -1230,8 +1353,8 @@
     ],
     "saved_projectors": [],
     "preview_locked": false,
-    "scaling_enabled": false,
-    "scaling_level": -9,
+    "scaling_enabled": true,
+    "scaling_level": -10,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {
@@ -1249,6 +1372,374 @@
             "autoStartStreamTimer": false,
             "autoStartRecordTimer": false,
             "pauseRecordTimer": false
+        },
+        "auto-scene-switcher": {
+            "interval": 300,
+            "non_matching_scene": "",
+            "switch_if_not_matching": false,
+            "active": false,
+            "switches": []
+        },
+        "advanced-scene-switcher": {
+            "sceneGroups": [],
+            "macros": [
+                {
+                    "name": "Macro 1",
+                    "group": false,
+                    "pauseSaveBehavior": 0,
+                    "pause": false,
+                    "parallel": false,
+                    "checkConditionsInParallel": false,
+                    "actionTriggerMode": 1,
+                    "skipExecOnStart": false,
+                    "stopActionsIfNotDone": false,
+                    "useShortCircuitEvaluation": false,
+                    "useCustomConditionCheckInterval": false,
+                    "customConditionCheckInterval": {
+                        "value": {
+                            "value": 0.3,
+                            "type": 0
+                        },
+                        "unit": 0,
+                        "version": 1
+                    },
+                    "dockSettings": {
+                        "register": false,
+                        "standaloneDock": true,
+                        "dockWindow": "Dock",
+                        "hasRunButton": true,
+                        "hasPauseButton": true,
+                        "hasStatusLabel": false,
+                        "highlightIfConditionsTrue": false,
+                        "runButtonText": "Run",
+                        "pauseButtonText": "Pause",
+                        "unpauseButtonText": "Unpause",
+                        "conditionsTrueStatusText": "Conditions are true.",
+                        "conditionsFalseStatusText": "Conditions are false.",
+                        "dockId": "advss-macro-dock-4b8fe884-642b-4a97-8d63-6da591f5f55b",
+                        "version": 1
+                    },
+                    "macroActionConditionSplitterPosition": [
+                        {
+                            "pos": 260
+                        },
+                        {
+                            "pos": 258
+                        }
+                    ],
+                    "macroElseActionSplitterPosition": [
+                        {
+                            "pos": 226
+                        },
+                        {
+                            "pos": 0
+                        }
+                    ],
+                    "registerHotkeys": false,
+                    "pauseHotkey": [],
+                    "unpauseHotkey": [],
+                    "togglePauseHotkey": [],
+                    "conditions": [
+                        {
+                            "segmentSettings": {
+                                "collapsed": false,
+                                "varMappingExpanded": false,
+                                "useCustomLabel": false,
+                                "customLabel": "My label",
+                                "enabled": true,
+                                "version": 2,
+                                "varMappings": []
+                            },
+                            "id": "cursor",
+                            "logic": 0,
+                            "durationModifier": {
+                                "time_constraint": 0,
+                                "seconds": {
+                                    "value": {
+                                        "value": 0.0,
+                                        "type": 0
+                                    },
+                                    "unit": 0,
+                                    "version": 1
+                                }
+                            },
+                            "condition": 0,
+                            "button": 0,
+                            "minX": {
+                                "value": 1920,
+                                "type": 0
+                            },
+                            "minY": {
+                                "value": 0,
+                                "type": 0
+                            },
+                            "maxX": {
+                                "value": 1920,
+                                "type": 0
+                            },
+                            "maxY": {
+                                "value": 1080,
+                                "type": 0
+                            },
+                            "version": 1
+                        }
+                    ],
+                    "actions": [],
+                    "elseActions": [],
+                    "inputVariables": []
+                }
+            ],
+            "macroSettings": {
+                "highlightExecuted": false,
+                "highlightConditions": false,
+                "highlightActions": false,
+                "newMacroCheckInParallel": false,
+                "newMacroRegisterHotkey": false,
+                "newMacroUseShortCircuitEvaluation": false,
+                "saveSettingsOnMacroChange": true
+            },
+            "switches": [],
+            "ignoreWindows": [],
+            "screenRegion": [],
+            "pauseEntries": [],
+            "sceneRoundTrip": [],
+            "sceneTransitions": [],
+            "defaultTransitions": [],
+            "defTransitionDelay": 0,
+            "ignoreIdleWindows": [],
+            "idleTargetType": 0,
+            "idleSceneName": "",
+            "idleTransitionName": "",
+            "idleEnable": false,
+            "idleTime": 60,
+            "executableSwitches": [],
+            "randomSwitches": [],
+            "fileSwitches": [],
+            "readEnabled": false,
+            "readPath": "",
+            "writeEnabled": false,
+            "writePath": "",
+            "mediaSwitches": [],
+            "timeSwitches": [],
+            "audioSwitches": [],
+            "audioFallbackTargetType": 0,
+            "audioFallbackScene": "",
+            "audioFallbackTransition": "",
+            "audioFallbackEnable": false,
+            "audioFallbackDuration": {
+                "value": {
+                    "value": 0.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "videoSwitches": [],
+            "interval": 300,
+            "noMatchScene": {
+                "sceneSelection": {
+                    "type": 0,
+                    "name": "",
+                    "canvasSelection": "Main"
+                }
+            },
+            "switch_if_not_matching": 0,
+            "noMatchDelay": {
+                "value": {
+                    "value": 0.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "cooldown": {
+                "value": {
+                    "value": 0.0,
+                    "type": 0
+                },
+                "unit": 0,
+                "version": 1
+            },
+            "enableCooldown": false,
+            "active": true,
+            "startup_behavior": 0,
+            "autoStart": {
+                "event": 0,
+                "useAutoStartScene": false,
+                "sceneSelection": {
+                    "type": 0,
+                    "name": "",
+                    "canvasSelection": "Main"
+                },
+                "name": "",
+                "regexConfig": {
+                    "enable": false,
+                    "partial": false,
+                    "options": 0
+                }
+            },
+            "logLevel": 0,
+            "logLevelVersion": 1,
+            "showSystemTrayNotifications": false,
+            "disableHints": false,
+            "disableFilterComboboxFilter": false,
+            "warnPluginLoadFailure": true,
+            "hideLegacyTabs": true,
+            "settingsLockEnabled": false,
+            "settingsLockPassword": "",
+            "priority0": 10,
+            "priority1": 0,
+            "priority2": 2,
+            "priority3": 8,
+            "priority4": 6,
+            "priority5": 9,
+            "priority6": 7,
+            "priority7": 4,
+            "priority8": 1,
+            "priority9": 5,
+            "priority10": 3,
+            "threadPriority": 3,
+            "transitionOverrideOverride": false,
+            "adjustActiveTransitionType": true,
+            "lastImportPath": "",
+            "startHotkey": [],
+            "stopHotkey": [],
+            "toggleHotkey": [],
+            "newMacroHotkey": [
+                {
+                    "control": true,
+                    "key": "OBS_KEY_N"
+                }
+            ],
+            "upMacroSegmentHotkey": [],
+            "downMacroSegmentHotkey": [],
+            "removeMacroSegmentHotkey": [],
+            "tabWidgetOrder": [
+                {
+                    "generalTab": 0
+                },
+                {
+                    "macroTab": 1
+                },
+                {
+                    "windowTitleTab": 2
+                },
+                {
+                    "executableTab": 3
+                },
+                {
+                    "screenRegionTab": 4
+                },
+                {
+                    "mediaTab": 5
+                },
+                {
+                    "fileTab": 6
+                },
+                {
+                    "randomTab": 7
+                },
+                {
+                    "timeTab": 8
+                },
+                {
+                    "idleTab": 9
+                },
+                {
+                    "sceneSequenceTab": 10
+                },
+                {
+                    "audioTab": 11
+                },
+                {
+                    "videoTab": 12
+                },
+                {
+                    "sceneGroupTab": 13
+                },
+                {
+                    "transitionsTab": 14
+                },
+                {
+                    "pauseTab": 15
+                },
+                {
+                    "httpServerTab": 16
+                },
+                {
+                    "mqttConnectionTab": 17
+                },
+                {
+                    "macroScheduleTab": 18
+                },
+                {
+                    "twitchConnectionTab": 19
+                },
+                {
+                    "websocketConnectionTab": 20
+                },
+                {
+                    "actionQueueTab": 21
+                },
+                {
+                    "variableTab": 22
+                }
+            ],
+            "saveWindowGeo": false,
+            "windowPosX": 1920,
+            "windowPosY": 0,
+            "windowWidth": 1355,
+            "windowHeight": 719,
+            "macroListMacroEditSplitterPosition": [
+                {
+                    "pos": 266
+                },
+                {
+                    "pos": 1063
+                }
+            ],
+            "version": "8727a65513ecd06a8c50f99dc4eeb8fbb0323a23",
+            "variables": [],
+            "macroSearchSettings": {
+                "showAlways": false,
+                "searchType": 0,
+                "searchString": "",
+                "regexConfig": {
+                    "enable": false,
+                    "partial": false,
+                    "options": 0
+                }
+            },
+            "actionQueues": [],
+            "suppressCrashDialog": false,
+            "tabSettings": {
+                "searchType": 0,
+                "searchString": "",
+                "regexConfig": {
+                    "enable": false,
+                    "partial": false,
+                    "options": 0
+                }
+            },
+            "dockSettings": {
+                "searchType": 0,
+                "searchString": "",
+                "regexConfig": {
+                    "enable": false,
+                    "partial": false,
+                    "options": 0
+                }
+            },
+            "addVariablesDock": false,
+            "httpServers": [],
+            "mqttConnections": [],
+            "macroScheduleEntries": [],
+            "twitchConnections": [],
+            "websocketConnections": [],
+            "dockWindows": {
+                "docks": []
+            },
+            "alwaysShowTabs": true
         }
     },
     "resolution": {
