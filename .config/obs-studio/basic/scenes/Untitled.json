@@ -1,7 +1,7 @@
 {
     "name": "Untitled",
     "AuxAudioDevice1": {
-        "prev_ver": 536936450,
+        "prev_ver": 537001985,
         "name": "Mic/Aux",
         "uuid": "308eba53-886e-40bb-bf67-92a236f37ad2",
         "id": "pulse_input_capture",
@@ -32,7 +32,7 @@
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 536936450,
+                "prev_ver": 537001985,
                 "name": "Noise Suppression",
                 "uuid": "48fe2c23-4f29-4d1c-96b8-80720fc075e0",
                 "id": "noise_suppress_filter",
@@ -59,15 +59,15 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936450,
+                "prev_ver": 537001985,
                 "name": "3-Band Equalizer",
                 "uuid": "66c4d539-a94e-4fef-90af-38281953bf21",
                 "id": "basic_eq_filter",
                 "versioned_id": "basic_eq_filter",
                 "settings": {
                     "low": -8.0,
-                    "mid": -8.0,
-                    "high": 0.0
+                    "mid": -12.0,
+                    "high": 2.0
                 },
                 "mixers": 255,
                 "sync": 0,
@@ -87,7 +87,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936450,
+                "prev_ver": 537001985,
                 "name": "Compressor",
                 "uuid": "16b834f4-e55f-4a60-9628-e70264a544b7",
                 "id": "compressor_filter",
@@ -96,7 +96,7 @@
                     "ratio": 3.0,
                     "threshold": -20.0,
                     "attack_time": 1,
-                    "release_time": 100,
+                    "release_time": 200,
                     "output_gain": 8.0
                 },
                 "mixers": 255,
@@ -117,7 +117,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936450,
+                "prev_ver": 537001985,
                 "name": "Expander",
                 "uuid": "43bd089b-23fb-4994-a6ce-81aca6fea7d3",
                 "id": "expander_filter",
@@ -126,7 +126,7 @@
                     "ratio": 3.0,
                     "threshold": -35.0,
                     "attack_time": 1,
-                    "release_time": 100,
+                    "release_time": 200,
                     "output_gain": 0.0
                 },
                 "mixers": 255,
@@ -147,7 +147,7 @@
                 "private_settings": {}
             },
             {
-                "prev_ver": 536936450,
+                "prev_ver": 537001985,
                 "name": "Limiter",
                 "uuid": "c8349743-0028-40c6-b474-037839648735",
                 "id": "limiter_filter",
@@ -176,7 +176,7 @@
     },
     "sources": [
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "ALL",
             "uuid": "20806dc0-7cb1-403e-8b9c-41ea44eaddea",
             "id": "pipewire_audio_application_capture",
@@ -213,7 +213,7 @@
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": false,
+            "muted": true,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -230,7 +230,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "RUST is Love",
             "uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
             "id": "text_ft2_source",
@@ -264,7 +264,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "MIC",
             "uuid": "c5d46583-dc31-473a-9ac4-d3d928d33980",
             "id": "text_ft2_source",
@@ -302,7 +302,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Image",
             "uuid": "1a6234f6-2c01-4d2a-807f-3525ee7644e2",
             "id": "image_source",
@@ -330,7 +330,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Image 2",
             "uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
             "id": "image_source",
@@ -356,7 +356,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Screen Capture (PipeWire)",
             "uuid": "fb385fba-5321-4486-a157-8ae44742a33b",
             "id": "pipewire-screen-capture-source",
@@ -382,7 +382,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Input Overlay",
             "uuid": "837be09c-8fe5-44ef-bd08-8b5acc3941c0",
             "id": "input-overlay",
@@ -411,7 +411,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Video Capture Device (V4L2)",
             "uuid": "9f713c30-7f0f-4d23-a5dc-716f47c9b460",
             "id": "v4l2_input",
@@ -455,7 +455,7 @@
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 536936450,
+                    "prev_ver": 537001985,
                     "name": "Composite Blur",
                     "uuid": "6019dc66-2666-4bc8-a441-64fe7004209a",
                     "id": "obs_composite_blur",
@@ -487,7 +487,7 @@
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 536936450,
+                    "prev_ver": 537001985,
                     "name": "Color Correction",
                     "uuid": "0c115768-39e4-4696-9169-22e5939c116f",
                     "id": "color_filter",
@@ -516,7 +516,7 @@
             ]
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Screen Capture (PipeWire) 3",
             "uuid": "b0f0da4b-6dee-4225-988d-f4d003a68931",
             "id": "pipewire-screen-capture-source",
@@ -542,7 +542,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Scene",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
@@ -1260,7 +1260,7 @@
             }
         },
         {
-            "prev_ver": 536936450,
+            "prev_ver": 537001985,
             "name": "Scene 2",
             "uuid": "8c61196a-aa10-4d88-87a5-75cdfd048ce9",
             "id": "scene",
