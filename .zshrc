@@ -1,3 +1,5 @@
+[[ $- != *i* ]] && return
+
 #############
 # AUTOSTART #
 #############
@@ -83,10 +85,10 @@ tm() {
 }
 
 y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	command yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
-	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
 	command rm -f -- "$tmp"
 }
 
@@ -132,3 +134,6 @@ adbscr() {
   echo "Error: Wireless Debugging active? None of the open ports responded to ADB."
   return 2
 }
+
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
