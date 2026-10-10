@@ -1,1 +1,1 @@
-{"rate_control":"CBR","bitrate":6000,"keyint_sec":2,"preset":"p7","tune":"ll","lookahead":false,"adaptive_quantization":false}
+{"rate_control":"CBR","bitrate":6000,"keyint_sec":2,"preset":"p7","tune":"ll","lookahead":true,"adaptive_quantization":true,"bf":4}

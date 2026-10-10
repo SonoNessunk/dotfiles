@@ -7,7 +7,7 @@
         "id": "pulse_input_capture",
         "versioned_id": "pulse_input_capture",
         "settings": {
-            "device_id": "alsa_input.usb-145f_Trust_GXT_232_Microphone-00.pro-input-0"
+            "device_id": "alsa_input.usb-145f_Trust_GXT_232_Microphone-00.mono-fallback"
         },
         "mixers": 195,
         "sync": 0,
@@ -40,6 +40,36 @@
                 "settings": {
                     "suppress_level": -60,
                     "method": "rnnoise"
+                },
+                "mixers": 255,
+                "sync": 0,
+                "flags": 0,
+                "volume": 1.0,
+                "balance": 0.5,
+                "enabled": true,
+                "muted": false,
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "hotkeys": {},
+                "deinterlace_mode": 0,
+                "deinterlace_field_order": 0,
+                "monitoring_type": 0,
+                "private_settings": {}
+            },
+            {
+                "prev_ver": 537001985,
+                "name": "Expander",
+                "uuid": "43bd089b-23fb-4994-a6ce-81aca6fea7d3",
+                "id": "expander_filter",
+                "versioned_id": "expander_filter",
+                "settings": {
+                    "ratio": 3.0,
+                    "threshold": -35.0,
+                    "attack_time": 1,
+                    "release_time": 500,
+                    "output_gain": 0.0
                 },
                 "mixers": 255,
                 "sync": 0,
@@ -98,36 +128,6 @@
                     "attack_time": 1,
                     "release_time": 200,
                     "output_gain": 8.0
-                },
-                "mixers": 255,
-                "sync": 0,
-                "flags": 0,
-                "volume": 1.0,
-                "balance": 0.5,
-                "enabled": true,
-                "muted": false,
-                "push-to-mute": false,
-                "push-to-mute-delay": 0,
-                "push-to-talk": false,
-                "push-to-talk-delay": 0,
-                "hotkeys": {},
-                "deinterlace_mode": 0,
-                "deinterlace_field_order": 0,
-                "monitoring_type": 0,
-                "private_settings": {}
-            },
-            {
-                "prev_ver": 537001985,
-                "name": "Expander",
-                "uuid": "43bd089b-23fb-4994-a6ce-81aca6fea7d3",
-                "id": "expander_filter",
-                "versioned_id": "expander_filter",
-                "settings": {
-                    "ratio": 3.0,
-                    "threshold": -35.0,
-                    "attack_time": 1,
-                    "release_time": 200,
-                    "output_gain": 0.0
                 },
                 "mixers": 255,
                 "sync": 0,
@@ -213,7 +213,7 @@
             "volume": 1.0,
             "balance": 0.5,
             "enabled": true,
-            "muted": true,
+            "muted": false,
             "push-to-mute": false,
             "push-to-mute-delay": 0,
             "push-to-talk": false,
@@ -1316,16 +1316,16 @@
             }
         },
         {
-            "name": "Stinger",
-            "id": "obs_stinger_transition",
-            "settings": {}
-        },
-        {
             "name": "Slide",
             "id": "slide_transition",
             "settings": {
                 "direction": "left"
             }
+        },
+        {
+            "name": "Stinger",
+            "id": "obs_stinger_transition",
+            "settings": {}
         }
     ],
     "quick_transitions": [
