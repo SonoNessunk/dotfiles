@@ -36,12 +36,12 @@ zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 zinit snippet OMZ::lib/key-bindings.zsh
 
+zinit cdreplay -q
+
 # devo capire se serve o meno, a quanto pare quando carico tramite zinit il zcompdump viene creato in automatico
 #mkdir -p "$XDG_CACHE_HOME/zsh"
 #autoload -Uz compinit
 #compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
-
-zinit cdreplay -q
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -68,7 +68,7 @@ zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-alias ls='ls --color -1'
+alias ls='ls --color -1 -a'
 alias update='sudo pacman -Syu --noconfirm && paru -Sua --noconfirm'
 alias ssh-pala='ssh -i ~/.ssh/ssh-tunnel-pala pala@0pala.ddnsfree.com'
 
