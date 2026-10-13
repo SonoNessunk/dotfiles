@@ -39,7 +39,6 @@
 	"superSubScript": false,
 	"footnote": false,
 	"isHtmlEnabled": true,
-	"isGitlabCompatibilityEnabled": false,
 	"sequenceTheme": "hand",
 	"theme": "one-dark",
 	"spellcheckerEnabled": false,
@@ -70,9 +69,21 @@
 	"openedFilesInSidebar": false,
 	"lastOpenedFolder": "/home/sononessunk/Documents/MarkDown",
 	"treePathExcludePatterns": [],
+	"sourceCodeLineNumbers": true,
+	"texMathDollars": true,
+	"texMathGfm": false,
+	"texMathSingleBackslash": false,
+	"texMathDoubleBackslash": false,
+	"highlightSyntax": false,
+	"inlineDiff": false,
+	"multilineBlockquote": false,
+	"softNewlineAsSpace": false,
+	"plantumlServer": "https://www.plantuml.com/plantuml",
+	"autoRevealInSidebar": true,
+	"showPandocConvert": false,
 	"__internal__": {
 		"migrations": {
-			"version": "0.19.1"
+			"version": "0.21.2"
 		}
 	}
 }
