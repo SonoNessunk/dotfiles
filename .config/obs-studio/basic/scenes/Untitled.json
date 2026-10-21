@@ -1609,16 +1609,16 @@
     "transition_duration": 300,
     "transitions": [
         {
+            "name": "Stinger",
+            "id": "obs_stinger_transition",
+            "settings": {}
+        },
+        {
             "name": "Slide Right",
             "id": "slide_transition",
             "settings": {
                 "direction": "left"
             }
-        },
-        {
-            "name": "Stinger",
-            "id": "obs_stinger_transition",
-            "settings": {}
         },
         {
             "name": "Slide Left",
