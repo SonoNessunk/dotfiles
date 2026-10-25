@@ -38,11 +38,6 @@ zinit snippet OMZ::lib/key-bindings.zsh
 
 zinit cdreplay -q
 
-# devo capire se serve o meno, a quanto pare quando carico tramite zinit il zcompdump viene creato in automatico
-#mkdir -p "$XDG_CACHE_HOME/zsh"
-#autoload -Uz compinit
-#compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

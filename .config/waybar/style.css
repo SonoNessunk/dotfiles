@@ -1,0 +1,79 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* Base Style */
+#temperature,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#custom-notification {
+    background-color: #242424;
+    padding: 2px 8px;
+    margin: 2px 3px;
+    border-radius: 12px;
+    color: #dcdcdc;
+}
+
+/* Arch Icon */
+#custom-launcher {
+    background-color: #242424;
+    color: #ffffff;
+    padding: 2px 8px;
+    margin: 2px 3px;
+    border-radius: 12px;
+    min-width: 16px;
+}
+
+/* Workspaces */
+#workspaces {
+    background-color: transparent;
+    padding: 0px;
+    margin: 2px 3px;
+    border: none;
+}
+
+#workspaces button {
+    padding: 2px 8px;
+    margin: 0 2px;
+    border-radius: 12px;
+    color: #707070;
+    background-color: #242424;
+    border: none;
+}
+
+#workspaces button.active {
+    background-color: #dcdcdc;
+    color: #121212;
+}
+
+/* Module Colors */
+#clock {
+    color: #e0e0e0;
+}
+
+#pulseaudio {
+    color: #dcdcdc;
+}
+
+#network {
+    color: #dcdcdc;
+}
+
+#battery {
+    color: #dcdcdc;
+}
+
+#custom-notification {
+    color: #cccccc;
+}

@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/notification"
+    ],
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "uwsm app -- wofi --show drun"
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+    "clock": {
+        "format": "{:%H:%M %p}",
+        "tooltip-format": "{:%A, %d/%m/%Y}"
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "󰤨 {essid}",
+        "format-ethernet": "󰈀 Ethernet",
+        "format-disconnected": "󰤭 Disconnected",
+        "on-click": "kitty -e nmtui"
+    },
+    "battery": {
+        "format": "󰁹 {capacity}%"
+    },
+    "custom/notification": {
+        "format": "󰂚",
+        "tooltip": false,
+        "on-click": "swaync-client -t -sw"
+    }
+}

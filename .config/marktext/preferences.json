@@ -67,7 +67,7 @@
 	"customCss": "",
 	"imageRelativeDirectoryBase": "file",
 	"openedFilesInSidebar": false,
-	"lastOpenedFolder": "/home/sononessunk/Documents/MarkDown",
+	"lastOpenedFolder": "/home/sononessunk/Documents",
 	"treePathExcludePatterns": [],
 	"sourceCodeLineNumbers": true,
 	"texMathDollars": true,
@@ -81,9 +81,13 @@
 	"plantumlServer": "https://www.plantuml.com/plantuml",
 	"autoRevealInSidebar": true,
 	"showPandocConvert": false,
+	"defaultOpenMode": "edit",
+	"githubAlerts": false,
+	"openFilesInPreviewMode": true,
 	"__internal__": {
 		"migrations": {
-			"version": "0.21.2"
+			"version": "0.23.0"
 		}
-	}
+	},
+	"tocVisibility": true
 }

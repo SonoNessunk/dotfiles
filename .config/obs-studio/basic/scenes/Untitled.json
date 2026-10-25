@@ -1,7 +1,7 @@
 {
     "name": "Untitled",
     "AuxAudioDevice1": {
-        "prev_ver": 537001986,
+        "prev_ver": 553648128,
         "name": "Mic/Aux",
         "uuid": "308eba53-886e-40bb-bf67-92a236f37ad2",
         "id": "pulse_input_capture",
@@ -23,16 +23,19 @@
         "hotkeys": {
             "libobs.mute": [],
             "libobs.unmute": [],
+            "libobs.monitor-on": [],
+            "libobs.monitor-off": [],
             "libobs.push-to-mute": [],
             "libobs.push-to-talk": []
         },
         "deinterlace_mode": 0,
         "deinterlace_field_order": 0,
         "monitoring_type": 2,
+        "monitoring_enabled": true,
         "private_settings": {},
         "filters": [
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648128,
                 "name": "Noise Suppression",
                 "uuid": "48fe2c23-4f29-4d1c-96b8-80720fc075e0",
                 "id": "noise_suppress_filter",
@@ -56,10 +59,11 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             },
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648128,
                 "name": "Expander",
                 "uuid": "43bd089b-23fb-4994-a6ce-81aca6fea7d3",
                 "id": "expander_filter",
@@ -69,7 +73,7 @@
                     "threshold": -35.0,
                     "attack_time": 1,
                     "release_time": 500,
-                    "output_gain": 0.0
+                    "output_gain": 2.0
                 },
                 "mixers": 255,
                 "sync": 0,
@@ -86,10 +90,11 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             },
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648128,
                 "name": "3-Band Equalizer",
                 "uuid": "66c4d539-a94e-4fef-90af-38281953bf21",
                 "id": "basic_eq_filter",
@@ -114,10 +119,11 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             },
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648128,
                 "name": "Compressor",
                 "uuid": "16b834f4-e55f-4a60-9628-e70264a544b7",
                 "id": "compressor_filter",
@@ -144,10 +150,11 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             },
             {
-                "prev_ver": 537001986,
+                "prev_ver": 553648128,
                 "name": "Limiter",
                 "uuid": "c8349743-0028-40c6-b474-037839648735",
                 "id": "limiter_filter",
@@ -170,13 +177,14 @@
                 "deinterlace_mode": 0,
                 "deinterlace_field_order": 0,
                 "monitoring_type": 0,
+                "monitoring_enabled": false,
                 "private_settings": {}
             }
         ]
     },
     "sources": [
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "ALL",
             "uuid": "20806dc0-7cb1-403e-8b9c-41ea44eaddea",
             "id": "pipewire_audio_application_capture",
@@ -221,16 +229,19 @@
             "hotkeys": {
                 "libobs.mute": [],
                 "libobs.unmute": [],
+                "libobs.monitor-on": [],
+                "libobs.monitor-off": [],
                 "libobs.push-to-mute": [],
                 "libobs.push-to-talk": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Rust is Love",
             "uuid": "84b6ce25-617c-4180-9524-bba63c68907f",
             "id": "text_ft2_source",
@@ -261,10 +272,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "MIC - Status",
             "uuid": "c5d46583-dc31-473a-9ac4-d3d928d33980",
             "id": "text_ft2_source",
@@ -299,10 +311,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Image",
             "uuid": "1a6234f6-2c01-4d2a-807f-3525ee7644e2",
             "id": "image_source",
@@ -327,10 +340,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Rust mascot",
             "uuid": "84ee8222-b56f-4a23-948c-cdaa51163c54",
             "id": "image_source",
@@ -353,10 +367,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Input Overlay",
             "uuid": "837be09c-8fe5-44ef-bd08-8b5acc3941c0",
             "id": "input-overlay",
@@ -382,10 +397,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Video Capture Device (V4L2)",
             "uuid": "9f713c30-7f0f-4d23-a5dc-716f47c9b460",
             "id": "v4l2_input",
@@ -426,10 +442,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {},
             "filters": [
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648128,
                     "name": "Composite Blur",
                     "uuid": "6019dc66-2666-4bc8-a441-64fe7004209a",
                     "id": "obs_composite_blur",
@@ -458,10 +475,11 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 },
                 {
-                    "prev_ver": 537001986,
+                    "prev_ver": 553648128,
                     "name": "Color Correction",
                     "uuid": "0c115768-39e4-4696-9169-22e5939c116f",
                     "id": "color_filter",
@@ -485,18 +503,19 @@
                     "deinterlace_mode": 0,
                     "deinterlace_field_order": 0,
                     "monitoring_type": 0,
+                    "monitoring_enabled": false,
                     "private_settings": {}
                 }
             ]
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Desktop AOC",
             "uuid": "b0f0da4b-6dee-4225-988d-f4d003a68931",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "lzbJC_8KqyApMtjpPxlfMw"
+                "RestoreToken": "B0ipELGdvv69Iw0CmRz_CA"
             },
             "mixers": 0,
             "sync": 0,
@@ -513,16 +532,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Desktop ASUS",
             "uuid": "a6371a09-058d-43ba-b617-672dc2f5e708",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "8TeI_vv5B3jcJyupx6mh6w"
+                "RestoreToken": ""
             },
             "mixers": 0,
             "sync": 0,
@@ -539,10 +559,11 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Desktop 2",
             "uuid": "8c61196a-aa10-4d88-87a5-75cdfd048ce9",
             "id": "scene",
@@ -684,13 +705,14 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {
                 "transition": "Slide Left"
             }
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Generale",
             "uuid": "134f134d-5912-4286-97c1-a6a571961cda",
             "id": "scene",
@@ -1288,6 +1310,7 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {
                 "transition": "Slide Right",
@@ -1295,7 +1318,7 @@
             }
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Desktop 1",
             "uuid": "22297aa0-d958-4717-9b70-37949a5110c6",
             "id": "scene",
@@ -1437,11 +1460,12 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 537001986,
+            "prev_ver": 553648128,
             "name": "Condivisa",
             "uuid": "f0da33c3-14a0-4dbb-a4cf-de30b3e987c5",
             "id": "scene",
@@ -1583,6 +1607,7 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "monitoring_enabled": false,
             "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         }
@@ -1602,8 +1627,8 @@
             "name": "Condivisa"
         }
     ],
-    "current_scene": "Generale",
-    "current_program_scene": "Generale",
+    "current_scene": "Desktop 2",
+    "current_program_scene": "Desktop 2",
     "canvases": [],
     "current_transition": "Slide Right",
     "transition_duration": 300,
