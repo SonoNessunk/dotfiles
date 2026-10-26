@@ -25,7 +25,7 @@ hl.monitor({
 
 local terminal    = "uwsm app -- kitty"
 local fileManager = "uwsm app -- dolphin"
-local menu        = "uwsm app -- wofi --show drun"
+local menu        = "uwsm app -- wofi --show drun -i --allow-images -D key_expand=Tab"
 
 
 -------------------
