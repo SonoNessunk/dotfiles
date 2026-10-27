@@ -8,7 +8,7 @@ hl.monitor({
     mode     = "1920x1080@165",
     position = "1920x0",
     scale    = "1",
-    vrr      = 1,
+    vrr      = 0,
 })
 
 hl.monitor({
@@ -16,7 +16,7 @@ hl.monitor({
     mode     = "1920x1080@60",
     position = "0x0",
     scale    = "1",
-    vrr      = 1,
+    vrr      = 0,
 })
 
 ---------------------
@@ -101,7 +101,7 @@ hl.config({
         rounding_power = 2,
 
         active_opacity   = 1.0,
-        inactive_opacity = 0.9,
+        inactive_opacity = 0.85,
 
         shadow = {
             enabled      = true,
@@ -112,8 +112,8 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 3,
-            passes    = 1,
+            size      = 10,
+            passes    = 2,
             vibrancy  = 0.1696,
         },
     },
@@ -253,13 +253,13 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("uwsm stop"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + ALT + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+hl.bind(mainMod .. " + F11", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind("CTRL + SHIFT + P", hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
-hl.bind(mainMod .. " + CTRL + V", hl.dsp.exec_cmd("cliphist list | uwsm app -- wofi --dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | uwsm app -- wofi --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd([[slurp | tee >(grim -g "$(cat)" "$HOME/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png") | grim -g "$(cat)" - | wl-copy]]))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("uwsm app -- hyprlock"))
 

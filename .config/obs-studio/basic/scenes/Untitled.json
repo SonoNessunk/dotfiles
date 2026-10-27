@@ -515,7 +515,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "B0ipELGdvv69Iw0CmRz_CA"
+                "RestoreToken": "hxhDXUbcF4YELCllTdv6SQ"
             },
             "mixers": 0,
             "sync": 0,
@@ -542,7 +542,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": ""
+                "RestoreToken": "fV8_Ul0OPkbD2MogDPFRAA"
             },
             "mixers": 0,
             "sync": 0,
@@ -1627,8 +1627,8 @@
             "name": "Condivisa"
         }
     ],
-    "current_scene": "Desktop 2",
-    "current_program_scene": "Desktop 2",
+    "current_scene": "Desktop 1",
+    "current_program_scene": "Desktop 1",
     "canvases": [],
     "current_transition": "Slide Right",
     "transition_duration": 300,
@@ -1989,19 +1989,19 @@
                     "pauseTab": 15
                 },
                 {
-                    "httpServerTab": 16
+                    "twitchConnectionTab": 16
                 },
                 {
-                    "mqttConnectionTab": 17
+                    "httpServerTab": 17
                 },
                 {
                     "macroScheduleTab": 18
                 },
                 {
-                    "twitchConnectionTab": 19
+                    "websocketConnectionTab": 19
                 },
                 {
-                    "websocketConnectionTab": 20
+                    "mqttConnectionTab": 20
                 },
                 {
                     "actionQueueTab": 21
@@ -2023,7 +2023,7 @@
                     "pos": 1063
                 }
             ],
-            "version": "8727a65513ecd06a8c50f99dc4eeb8fbb0323a23",
+            "version": "29e07ce63a8df145151715d971c5c788dd2ed7ef",
             "variables": [],
             "macroSearchSettings": {
                 "showAlways": false,
@@ -2056,11 +2056,11 @@
                 }
             },
             "addVariablesDock": false,
-            "httpServers": [],
-            "mqttConnections": [],
-            "macroScheduleEntries": [],
             "twitchConnections": [],
+            "httpServers": [],
+            "macroScheduleEntries": [],
             "websocketConnections": [],
+            "mqttConnections": [],
             "dockWindows": {
                 "docks": []
             },
