@@ -21,4 +21,4 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export XDG_CURRENT_DESKTOP="Hyprland"
 export XDG_SESSION_TYPE="wayland"
 export XDG_SESSION_DESKTOP="Hyprland"
-
+export XDG_MENU_PREFIX=arch-
