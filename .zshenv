@@ -5,8 +5,8 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 export GTK_USE_PORTAL=1
 
-export EDITOR="nano"
-export VISUAL="nano"
+export EDITOR="micro"
+export VISUAL="micro"
 
 # Flutter
 if [[ -x "$HOME/src/flutter/bin/flutter" ]]; then

@@ -11,7 +11,7 @@ play = [
 	{ run = "xdg-open %s", orphan = true, for = "unix" },
 ]
 edit = [
-	{ run = "nano %s", block = true, for = "unix" },
+	{ run = "micro %s", block = true, for = "unix" },
 ]
 open = [
 	{ run = "xdg-open %s", desc = "Open" },
