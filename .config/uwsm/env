@@ -4,12 +4,12 @@ export LIBVA_DRIVER_NAME="nvidia"
 export __GLX_VENDOR_LIBRARY_NAME="nvidia"
 export GBM_BACKEND="nvidia-drm"
 
-# -- Cursor Theme
+# -- Cursor Theme --
 export XCURSOR_SIZE="24"
 export HYPRCURSOR_THEME="WinSur Dark Cursors"
 export HYPRCURSOR_SIZE="24"
 
-# -- Toolkit
+# -- Toolkit --
 export GDK_BACKEND="wayland,x11,*"
 export QT_QPA_PLATFORM="wayland;xcb"
 export CLUTTER_BACKEND="wayland"
@@ -17,7 +17,7 @@ export QT_QPA_PLATFORMTHEME="qt6ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR="1"
 export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 
-# -- XDG
+# -- XDG --
 export XDG_CURRENT_DESKTOP="Hyprland"
 export XDG_SESSION_TYPE="wayland"
 export XDG_SESSION_DESKTOP="Hyprland"

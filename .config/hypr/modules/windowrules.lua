@@ -46,6 +46,22 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+	match = { class = "peazip"},
+	float = true,
+})
+
+hl.window_rule({
+	match = { class = "org.kde.kalk"},
+	float = true,
+})
+
+hl.window_rule({
+	name = "Picture-in-Picture",
+	match = { class = "firefox"},
+	float = true,
+})
+
 hl.workspace_rule({
     workspace = "2",
     persistent = true,
