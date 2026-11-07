@@ -1,3 +1,4 @@
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
@@ -34,25 +35,25 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "Peazip",
-	match = { class = "peazip"},
+	match = { class = "peazip" },
 	float = true,
 })
 
 hl.window_rule({
 	name = "Peazip Analyze",
-	match = { class = "pea"},
+	match = { class = "pea" },
 	float = true,
 })
 
 hl.window_rule({
 	name = "KDE Calculator",
-	match = { class = "org.kde.kalk"},
+	match = { class = "org.kde.kalk" },
 	float = true,
 })
 
 hl.window_rule({
 	name = "Picture-in-Picture",
-	match = { title = "Picture-in-Picture"},
+	match = { title = "Picture-in-Picture" },
 	float = true,
 })
 
@@ -63,8 +64,9 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "Firefox Downlaod Library",
-	match = { title = "Library"},
+	name = "Firefox Download Library",
+	match = { title = "Library" },
+	size = { 1000, 580 },
 	float = true,
 })
 

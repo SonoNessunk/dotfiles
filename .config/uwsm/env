@@ -5,6 +5,7 @@ export __GLX_VENDOR_LIBRARY_NAME="nvidia"
 export GBM_BACKEND="nvidia-drm"
 
 # -- Cursor Theme --
+export XCURSOR_THEME="WinSur Dark Cursors"
 export XCURSOR_SIZE="24"
 export HYPRCURSOR_THEME="WinSur Dark Cursors"
 export HYPRCURSOR_SIZE="24"
