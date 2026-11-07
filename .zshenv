@@ -4,6 +4,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 
 export GTK_USE_PORTAL=1
+export GDK_DEBUG=portals
 
 export EDITOR="micro"
 export VISUAL="micro"
