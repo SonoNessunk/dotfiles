@@ -12,7 +12,7 @@
         "mixers": 195,
         "sync": 0,
         "flags": 0,
-        "volume": 0.0,
+        "volume": 1.0,
         "balance": 0.5,
         "enabled": true,
         "muted": false,
@@ -100,7 +100,7 @@
                 "id": "basic_eq_filter",
                 "versioned_id": "basic_eq_filter",
                 "settings": {
-                    "low": -8.0,
+                    "low": -12.0,
                     "mid": -12.0,
                     "high": 2.0
                 },
@@ -515,7 +515,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "XwfHhhc60v5ZjwLITS7qOw"
+                "RestoreToken": "1xqghpdPFXRjB8LQqEiSrA"
             },
             "mixers": 0,
             "sync": 0,
@@ -542,7 +542,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": ""
+                "RestoreToken": "5hy2zqXhZUL7e2lmB857WQ"
             },
             "mixers": 0,
             "sync": 0,
@@ -1627,17 +1627,17 @@
             "name": "Condivisa"
         }
     ],
-    "current_scene": "Desktop 2",
-    "current_program_scene": "Desktop 2",
+    "current_scene": "Desktop 1",
+    "current_program_scene": "Desktop 1",
     "canvases": [],
     "current_transition": "Slide Right",
     "transition_duration": 300,
     "transitions": [
         {
-            "name": "Slide Right",
+            "name": "Slide Left",
             "id": "slide_transition",
             "settings": {
-                "direction": "left"
+                "direction": "right"
             }
         },
         {
@@ -1646,10 +1646,10 @@
             "settings": {}
         },
         {
-            "name": "Slide Left",
+            "name": "Slide Right",
             "id": "slide_transition",
             "settings": {
-                "direction": "right"
+                "direction": "left"
             }
         }
     ],

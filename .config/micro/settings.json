@@ -1,0 +1,8 @@
+{
+    "clipboard": "external",
+    "showchars": "space=·,tab=»",
+    "tabstospaces": true,
+    "tabsize": 4,
+    "colorscheme": "github-dark",
+    "truecolor": "on"
+}

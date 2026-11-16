@@ -4,7 +4,8 @@
 
 local terminal    = "uwsm app -- kitty"
 local fileManager = "uwsm app -- thunar"
-local menu        = "uwsm app -- wofi --show drun -i --allow-images -D key_expand=Tab"
+-- local menu        = "uwsm app -- wofi --show drun -i --allow-images -D key_expand=Tab --style '$HOME/.config/wofi/style.css'"
+local menu        = "uwsm app -- rofi -show drun"
 
 
 ---------------------
@@ -22,12 +23,14 @@ hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + F",         hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R",         hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P",         hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + J",         hl.dsp.layout("togglesplit"))    -- dwindle only
+hl.bind(mainMod .. " + J",         hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F11",       hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind("CTRL + SHIFT + P",        hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
 hl.bind(mainMod .. " + V",         hl.dsp.exec_cmd("cliphist list | uwsm app -- wofi --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd([[slurp | tee >(grim -g "$(cat)" "$HOME/Pictures/Screenshots/screenshot-$(date +'%Y-%m-%d-%H%M%S').png") | grim -g "$(cat)" - | wl-copy]]))
 hl.bind(mainMod .. " + L",         hl.dsp.exec_cmd("uwsm app -- hyprlock"))
+
+hl.bind("ALT + PERIOD",            hl.dsp.exec_cmd("rofimoji --action copy"))
 
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))

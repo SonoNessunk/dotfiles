@@ -8,7 +8,7 @@ export GDK_DEBUG=portals
 
 export EDITOR="micro"
 export VISUAL="micro"
-
+export SUDO_EDITOR="micro"
 # Flutter
 if [[ -x "$HOME/src/flutter/bin/flutter" ]]; then
     export PATH="$HOME/src/flutter/bin:$PATH"

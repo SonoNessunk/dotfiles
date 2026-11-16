@@ -76,6 +76,15 @@ hl.window_rule({
 	float = true,
 })
 
+hl.window_rule({
+	name = "Friend List Steam",
+	match = {
+		class = "steam",
+		title = "Friends List"
+	},
+	float = true,
+})
+
 hl.workspace_rule({
     workspace = "2",
     persistent = true,
