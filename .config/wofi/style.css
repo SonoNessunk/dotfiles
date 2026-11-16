@@ -8,13 +8,17 @@
 }
 
 window {
-    background-color: #080808;
-    border: 1px solid #242424;
-    border-radius: 10px;
+    background-color: transparent;
     color: #F5F5F5;
 }
 
-#outer-box { margin: 6px; background-color: transparent; }
+#outer-box {
+    background-color: #080808;
+    border: 1px solid #242424;
+    border-radius: 10px;
+    padding: 6px;
+}
+
 #inner-box { background-color: transparent; }
 #scroll    { background-color: transparent; }
 

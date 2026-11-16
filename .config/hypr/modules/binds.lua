@@ -5,8 +5,8 @@
 local terminal    = "uwsm app -- kitty"
 local fileManager = "uwsm app -- thunar"
 -- local menu        = "uwsm app -- wofi --show drun -i --allow-images -D key_expand=Tab --style '$HOME/.config/wofi/style.css'"
-local menu        = "uwsm app -- rofi -show drun"
-
+-- local menu        = "uwsm app -- rofi -show drun"
+local menu = "uwsm app -- wofi --show drun"
 
 ---------------------
 ---- KEYBINDINGS ----

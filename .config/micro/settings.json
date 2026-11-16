@@ -4,5 +4,6 @@
     "tabstospaces": true,
     "tabsize": 4,
     "colorscheme": "github-dark",
-    "truecolor": "on"
+    "truecolor": "on",
+    "softwrap": true
 }
